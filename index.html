@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fotos/favicon.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+ 
+
+    <title>home</title>
+</head>
+
+<body>
+<button id="scrollToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="scroll-tracker"></div>
+    <header id="header">
+
+        <div id="navigation-placeholder"></div>
+
+        <div class="index">
+            <div class="containerHead">
+                 <img class="logo-on-image" src="fotos/logoKort.png"> 
+                 <button onclick="location.href='#overOns'">Ontdek ons</button>
+        </div>
+        </div>
+    </header>
+    <main>
+    
+        <section>
+            <div id="overOns" class="overOns">
+                <h2>Wie zijn wij ?</h2>
+                <div class="lijn"></div>
+                <div class="overOnsFlex">
+                    <div class="imageLeft">
+                        <p class="text1"><strong>Van Overmeeren bv</strong> is uw partner voor verwarming, sanitair en koeling.</p>
+                        <p class="text2"><strong>Sinds 2006 </strong> staan wij ter beschikking voor zowel herstellingen, renovaties als nieuwbouw projecten.</p>
+                        <img class="wie" src="fotos/logo.png">
+
+                    </div>
+
+                    <div class="textRight">
+                        <i class="fa-solid fa-circle-plus fa-beat meer" onclick="location.href='realisaties.php'"></i>
+                        <img class="meerPic" src="fotos/achtergrond.png" alt="over ons" onclick="location.href='realisaties.php'">
+                    </div>
+                    <!-- <div class="meerRes">
+                        <button class="meerResBtn" onclick="location.href='realisaties.php'">Meer</button>
+                    </div> -->
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="specs">
+            <div id="diensten" class="sectionOne">
+                <h1 class="specTitle">Specialiteiten</h1>
+                <div class="lijn2"></div>
+                <div class="box">
+                    <div class="boxes vanLinks" onclick="location.href='verwarming.php'">
+                        <div class="backgroundColor">
+                            <i class="fa-solid fa-temperature-arrow-up icoon"></i>
+                            <p class="prodtext">Verwarming</p>
+                        </div>
+                        <p class="beschrijving">Voor verwarming kan u bij ons terecht voor zowel gas, mazout als warmtepompen. <br> Dit zowel voor nieuwe installatie of vervanging van bestaande.</p>
+                    </div>
+                    <div class="boxes vanLinks" onclick="location.href='sanitair.php'">
+                        <i class="fa-solid fa-faucet-drip icoon"></i>
+                        <p class="prodtext">Sanitair</p>
+                        <p class="beschrijving">Wij bieden diensten aan op het gebied van badkamerrenovatie, vervanging van leidingen, regenwaterrecuperatie en waterbehandeling.</p>
+                    </div>
+                    <div class="boxes vanRechts" onclick="location.href='cooling.php'">
+                        <i class="fa-solid fa-fan icoon"></i></i>
+                        <p class="prodtext">Cooling</p>
+                        <p class="beschrijving">Nood aan verkoeling <br>’s zomers? <br> Bij ons kan u ook terecht voor airconditionings. Hiermee kan je zowel warmen als koelen.</p>
+                    </div>
+                    <div class="boxes vanRechts" onclick="location.href='onderhoud.php'">
+                        <i class="fa-solid fa-heart-circle-plus icoon"></i></i>
+                        <p class="prodtext">Onderhoud</p>
+                        <p class="beschrijving">Ook voor onderhoud van uw verwarming kan u op ons beroep doen. Mazoutketels : <br>alle merken <br>–<br> Gasketels : <br>enkel Buderus</p>
+                    </div>
+                </div>
+        </section>
+        <section>
+            <div class="realisaties">
+                <h2 class="specTitle">Realisaties</h2>
+                <div class="lijn"></div>
+                <!-- <p class="reaUitleg"><strong>Lorem, ipsum</strong> dolor sit amet consectetur adipisicing elit. Quae corporis voluptatibus libero minus culpa totam ducimus, perferendis ex accusamus modi odio ab recusandae similique maiores, quam facilis ea minima ut.</p> -->
+                <div class="reaKnopPos">
+                    <button class="reaKnop" onclick="location.href='realisaties.php'">Bekijk onze realisaties</button>
+                </div>
+                <div class="reaContainer">
+                    <div onclick="location.href='realisaties.php'"><img class="rea1 vanLinks" data-aos="fade-in" src="fotos/realisatie1.png"></div>
+                    <div onclick="location.href='realisaties.php'"><img class="rea2 vanBeneden" data-aos="fade-in" src="fotos/realisatie2.png"></div>
+                    <div onclick="location.href='realisaties.php'"><img class="rea3 vanRechts" data-aos="fade-in" src="fotos/realisatie3.png"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="specTitle">Waar ?</h2>
+            <div class="lijn"></div>
+            <div class="locatieKaart">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.6282139579407!2d3.5716746!3d50.7824652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c31a9a5bcc8a89%3A0x42b9f8f05b3ca2b!2sZulzekestraat%2044c%2C%209690%20Kluisbergen!5e0!3m2!1snl!2sbe!4v1673716177351!5m2!1snl!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <!-- <?php include 'footer.php'; ?> -->
+    </footer>
+    <script src="https://kit.fontawesome.com/d67b9bf45c.js" crossorigin="anonymous"></script>
+    <script src="js/include.js" type="module"></script>
+    <script src="js/header.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/topScroll.js" type="module"></script>
+
+</body>
+
+</html>
