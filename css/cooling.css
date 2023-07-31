@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family     : 'Open Sans', sans-serif;
+
+}
+
+.hero {
+    background-image: url(../fotos/cooling.png);
+    background-size : cover;
+    /* color        : #161f7a; */
+    padding-top     : 200px;
+    padding-bottom  : 200px;
+}
+
+.hero h1 {
+    font-size    : 50px;
+    font-weight  : 600;
+    text-align   : center;
+    margin-bottom: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+section {
+    margin    : 0 auto;
+    max-width : 1600px;
+    text-align: center;
+}
+
+
+.verwarmingsText {
+    font-size    : 20px;
+    font-weight  : 400;
+    line-height  : 1.5;
+    margin-bottom: 50px;
+    max-width    : 1600px;
+    display      : flex;
+}
+
+.verwarmingsText h2 {
+    font-size  : 30px;
+    line-height: 1.5;
+    text-align : left;
+    max-width  : 800px;
+    margin-top : 25px;
+    margin-left: 180px;
+    color      : #161f7a;
+}
+
+.verwarmingsText .text {
+    font-size   : 20px;
+    font-weight : 400;
+    line-height : 1.5;
+    text-align  : left;
+    margin-left : 180px;
+    margin-right: auto;
+    max-width   : 800px;
+    margin-top  : 25px;
+}
+
+.rechts {
+    margin-left: 140px;
+    margin-top : 35px;
+}
+
+.verwarmingsLogo {
+    width        : 300px;
+    border-radius: 2px;
+}
+
+.underText {
+    font-size : 17px;
+    text-align: center;
+    max-width : 300px;
+}
+
+/* media query 1500px display block verwarmingstext */
+@media screen and (max-width: 1500px) {
+    .verwarmingsText {
+        display  : block;
+        max-width: 100%;
+    }
+
+    .verwarmingsText h2 {
+        text-align  : center;
+        max-width   : 1400px;
+        margin-left : 300px;
+        margin-right: 300px;
+
+    }
+
+    .verwarmingsText .text {
+        text-align  : center;
+        max-width   : 1400px;
+        margin-left : 300px;
+        margin-right: 300px;
+    }
+
+    .rechts {
+        margin-left: 0;
+    }
+
+    .underText {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .verwarmingsText h2 {
+        text-align  : left;
+        max-width   : 1400px;
+        margin-left : 00px;
+        margin-right: 200px;
+
+    }
+
+    .verwarmingsText .text {
+        text-align  : left;
+        max-width   : 1400px;
+        margin-left : 200px;
+        margin-right: 200px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .hero h1 {
+        font-size: 25px !important;
+    }
+
+    .verwarmingsText h2 {
+        text-align  : center;
+        max-width   : 1400px;
+        margin-left : 0px;
+        margin-right: 0px;
+
+    }
+
+    .verwarmingsText .text {
+        text-align  : center;
+        max-width   : 1400px;
+        margin-left : 0px;
+        margin-right: 0px;
+    }
+}
+
+.soortenVerwarming {
+    height         : auto;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+    flex-flow      : wrap;
+    margin-left    : 10%;
+    margin-right   : 10%;
+    margin-top     : 1%;
+    margin-bottom  : 50px;
+    left           : 0;
+    right          : 0;
+}
+
+.soortenVerwarming img {
+    width           : 300px;
+    height          : 230px;
+    background-color: rgb(255, 255, 255);
+    box-sizing      : border-box;
+    font-size       : 50px;
+    transition      : 0.5s;
+    border-radius   : 2px;
+    margin-bottom   : 8%;
+    left            : 0;
+    right           : 0;
+}
+
+.soortText {
+    font-weight  : 600;
+    font-size    : 20px;
+    margin-bottom: 50px;
+}
