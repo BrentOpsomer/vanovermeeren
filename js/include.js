@@ -50,8 +50,8 @@ function includeFooterMenu() {
               <li><a href="index.html#specs">Specialiteiten</a></li>
               <li><a class="onder" href="verwarming.html">- Verwarming</a></li>
               <li><a class="onder" href="sanitair.html">- Sanitair</a></li>
-              <li><a class="onder" href="Cooling.html">- Cooling</a></li>
-              <li><a class="onder" href="Onderhoud.html">- Onderhoud</a></li>
+              <li><a class="onder" href="cooling.html">- Cooling</a></li>
+              <li><a class="onder" href="onderhoud.html">- Onderhoud</a></li>
             </ul>
           </div>
           <div class="footerKolom">
