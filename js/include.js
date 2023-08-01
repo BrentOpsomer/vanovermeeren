@@ -80,7 +80,7 @@ function includeFooterMenu() {
               <div class="iconen">
                 <a href="mailto:"><i class="fa fa-envelope"></i></a>
               </div>
-              <li><a class="contact" href="mailto:">jurgen.vanovermeeren@.....com</a></li>
+              <li><a class="contact" href="mailto:">van.overmeeren@telenet.be</a></li>
             </ul>
           </div>
         </div>
