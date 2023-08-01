@@ -76,7 +76,7 @@ button#scrollToTopBtn:hover {
 
 
 .index {
-    background-image   : url(/fotos/cooling.png);
+    background-image   : url(../fotos/cooling.png);
     background-size    : cover;
     background-position: center;
     padding-top        : 300px;
