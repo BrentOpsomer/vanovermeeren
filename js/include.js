@@ -87,7 +87,7 @@ function includeFooterMenu() {
       </div>
     </footer>
     <div class="copyR">
-      <img class="logo-on-image" src="fotos/logoKort.png">
+    <p class="footerNaam">vanovermeeren bv</p>
       <li class="copyright"><a>&copy; 2023 - vanovermeeren.be</a></li>
     </div>
   `;
