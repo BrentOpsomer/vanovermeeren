@@ -11,7 +11,7 @@ function insertNavigationMenu() {
           <ul class="submenu">
             <li class="subitem"><a href="verwarming">VERWARMING</a></li>
             <li class="subitem"><a href="sanitair">SANITAIR</a></li>
-            <li class="subitem"><a href="cooling">KOELING</a></li>
+            <li class="subitem"><a href="koeling">KOELING</a></li>
             <li class="subitem"><a href="onderhoud">ONDERHOUD</a></li>
           </ul>
         </li>
@@ -50,7 +50,7 @@ function includeFooterMenu() {
               <li><a href="index#specs">Specialiteiten</a></li>
               <li><a class="onder" href="verwarming">- Verwarming</a></li>
               <li><a class="onder" href="sanitair">- Sanitair</a></li>
-              <li><a class="onder" href="cooling">- Cooling</a></li>
+              <li><a class="onder" href="koeling">- Koeling</a></li>
               <li><a class="onder" href="onderhoud">- Onderhoud</a></li>
             </ul>
           </div>
