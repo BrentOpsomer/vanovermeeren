@@ -4,7 +4,7 @@ function insertNavigationMenu() {
     <nav>
       <ul class="menu">
         <div class="logo"><img src="fotos/logo.png"></div>
-        <li class="item"><a href="index.html">HOME</a></li>
+        <li class="item"><a href="index">HOME</a></li>
         <li class="item"><a href="realisaties">REALISATIES</a></li>
         <li class="item has-submenu">
           <a tabindex="0">SPECIALITEITEN</a>
