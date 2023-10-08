@@ -9,10 +9,10 @@ function insertNavigationMenu() {
         <li class="item has-submenu">
           <a tabindex="0">SPECIALITEITEN</a>
           <ul class="submenu">
-            <li class="subitem"><a href="verwarming.html">VERWARMING</a></li>
-            <li class="subitem"><a href="sanitair.html">SANITAIR</a></li>
-            <li class="subitem"><a href="cooling.html">KOELING</a></li>
-            <li class="subitem"><a href="onderhoud.html">ONDERHOUD</a></li>
+            <li class="subitem"><a href="verwarming">VERWARMING</a></li>
+            <li class="subitem"><a href="sanitair">SANITAIR</a></li>
+            <li class="subitem"><a href="cooling">KOELING</a></li>
+            <li class="subitem"><a href="onderhoud">ONDERHOUD</a></li>
           </ul>
         </li>
         <li class="item"><a href="#foot">CONTACT</a></li>
@@ -46,12 +46,12 @@ function includeFooterMenu() {
           <div class="footerKolom">
             <h4>Navigatie</h4>
             <ul>
-              <li><a href="realisaties.html">Realisaties</a></li>
-              <li><a href="index.html#specs">Specialiteiten</a></li>
-              <li><a class="onder" href="verwarming.html">- Verwarming</a></li>
-              <li><a class="onder" href="sanitair.html">- Sanitair</a></li>
-              <li><a class="onder" href="cooling.html">- Cooling</a></li>
-              <li><a class="onder" href="onderhoud.html">- Onderhoud</a></li>
+              <li><a href="realisaties">Realisaties</a></li>
+              <li><a href="index#specs">Specialiteiten</a></li>
+              <li><a class="onder" href="verwarming">- Verwarming</a></li>
+              <li><a class="onder" href="sanitair">- Sanitair</a></li>
+              <li><a class="onder" href="cooling">- Cooling</a></li>
+              <li><a class="onder" href="onderhoud">- Onderhoud</a></li>
             </ul>
           </div>
           <div class="footerKolom">
