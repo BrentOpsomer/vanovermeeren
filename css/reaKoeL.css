@@ -44,12 +44,12 @@
 }
 
 .container2 {
-    display : flex;
-    position: relative;
-    margin: auto;
-    max-width: 1170px;
+    display        : flex;
+    position       : relative;
+    margin         : auto;
+    max-width      : 1170px;
     justify-content: center;
-    text-align: center;
+    text-align     : center;
 }
 
 .container2 .koeling .imgKoel {
@@ -182,9 +182,9 @@
 }
 
 .row2 {
-    border: solid 2px #161f7a;
-    display: flex;
-    flex-wrap: wrap;
+    border         : solid 2px #161f7a;
+    display        : flex;
+    flex-wrap      : wrap;
     justify-content: center;
 }
 
@@ -257,6 +257,7 @@
 }
 
 @media screen and (max-width: 900px) {
+
     .verdwijn,
     .caption-container2 {
         display: none;
@@ -270,6 +271,7 @@
 }
 
 @media screen and (max-width: 500px) {
+
     .prevPos2,
     .nextPos2 {
         top: 63%;

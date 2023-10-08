@@ -26,8 +26,8 @@
 .keuze {
   background-color: #fff;
   color           : #161f7a;
-  border: 2px solid #161f7a;
-  font-weight: bold;
+  border          : 2px solid #161f7a;
+  font-weight     : bold;
   padding         : 15px 20px;
   border          : none;
   border-radius   : 5px;
@@ -37,14 +37,20 @@
   transition      : background-color 0.3s ease;
   align-items     : center;
   justify-content : center;
-  border: 2px solid #161f7a;
+  border          : 2px solid #161f7a;
+}
+
+.standaard {
+  background-color: #161f7a;
+  color           : white;
+  font-weight     : 100;
 }
 
 .aangeDuid {
-  background-color: #000000;
-  color           : #161f7a;
-  border: 2px solid #161f7a;
-  font-weight: bold;
+  background-color: #161f7a;
+  color           : white;
+  border          : 2px solid #161f7a;
+  font-weight     : 100;
   padding         : 15px 20px;
   border          : none;
   border-radius   : 5px;
@@ -54,13 +60,13 @@
   transition      : background-color 0.3s ease;
   align-items     : center;
   justify-content : center;
-  border: 2px solid #161f7a;
+  border          : 2px solid #161f7a;
 }
 
 .keuze:hover {
   background-color: #161f7a;
   color           : white;
-  font-weight: 100;
+  font-weight     : 100;
 }
 
 

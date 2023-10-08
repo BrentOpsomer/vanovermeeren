@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".verbergKoeling").style.display = "none";
         document.querySelector(".verbergVerwarming").style.display = "none";
         verwarmingsKnop.classList.remove("aangeDuid");
+        verwarmingsKnop.classList.remove("standaard");
         verwarmingsKnop.classList.add("keuze");
         sanitairKnop.classList.remove("keuze");
         sanitairKnop.classList.add("aangeDuid");
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".verbergVerwarming").style.display = "none";
         document.querySelector(".verbergSanitair").style.display = "none";
         verwarmingsKnop.classList.remove("aangeDuid");
+        verwarmingsKnop.classList.remove("standaard");
         verwarmingsKnop.classList.add("keuze");
         koelingKnop.classList.remove("keuze");
         koelingKnop.classList.add("aangeDuid");
