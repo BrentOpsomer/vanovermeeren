@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl" translate="no">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,13 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/realisaties.css">
+    <link rel="stylesheet" href="./css/reaSanitair.css">
+    <link rel="stylesheet" href="./css/reaKoel.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <script src="./js/include.js" type="module" defer></script>
-
     <script src="./js/realisaties.js" defer></script>
-
+    <script src="./js/kiesRea.js" defer></script>
     <script src="./js/header.js" defer></script>
     <title>realisaties</title>
 </head>
@@ -21,7 +23,6 @@
 <body>
     <header>
         <div id="navigation-placeholder"></div>
-
         <div class="realisatieC">
             <div class="containerRea">
                 <h1 class="titel">REALISATIES</h1>
@@ -29,142 +30,452 @@
         </div>
     </header>
     <main>
+        <div class="opties">
+            <button id="verwarmKnop" class="keuze" onclick="toonVerwarming()">Verwarming</button>
+            <button id="sanitairKnop" class="keuze" onclick="toonSanitair()">Sanitair</button>
+            <button id="koelKnop" class="keuze" onclick="toonKoeling()">Koeling</button>
+        </div>
+        
         <div>
             <span class="close">&times;</span>
         </div>
-        <div class="container">
-            <div id="fotoKlik" class="badkamer">
-                <div class="numbertext">1 / 12</div>
-                <img src="./fotos/badkamer.jpg">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
+        <div id="toonVerwarming" class="verbergVerwarming">
+            <div class="container">
+                <div id="fotoKlik1" class="badkamer">
+                    <div class="numbertext">1 / 12</div>
+                    <img src="./fotos/badkamer.jpg">
+
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">2 / 12</div>
+                    <img src="./fotos/realisatie1.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+
+                <div class="badkamer">
+                    <div class="numbertext">3 / 12</div>
+                    <img src="./fotos/realisatie2.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+
+                <div class="badkamer">
+                    <div class="numbertext">4 / 12</div>
+                    <img src="./fotos/realisatie3.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+
+                <div class="badkamer">
+                    <div class="numbertext">5 / 12</div>
+                    <img src="./fotos/bad.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">6 / 12</div>
+                    <img src="./fotos/vloerverwarming.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">7 / 12</div>
+                    <img src="./fotos/regenwater.jpg">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">8 / 12</div>
+                    <img src="./fotos/warmtepomp.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">9 / 12</div>
+                    <img src="./fotos/verwarming1.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">10 / 12</div>
+                    <img src="./fotos/gas.jpg">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">11 / 12</div>
+                    <img src="./fotos/gas.png">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+                <div class="badkamer">
+                    <div class="numbertext">12 / 12</div>
+                    <img src="./fotos/mazout.jpg">
+                    <div class="prevPos"><a class="prev" onclick="plusSlides(-1)">❮</a></div>
+                    <div class="nextPos"><a class="next" onclick="plusSlides(1)">❯</a></div>
+                </div>
+
+                <div class="reaText">
+                    <h3 class="reaTiteltje">Verwarming realisaties</h3>
+                    <p class="reaUitleg">Ontdek onze <strong>portfolio</strong> van sanitair- en verwarmingsprojecten.
+                    </p>
+                    <p class="reaUitleg">We hebben ruime<strong> ervaring </strong>in het leveren van op maat gemaakte
+                        oplossingen voor residentiële en commerciële klanten. Van prachtige badkamers tot efficiënte
+                        verwarmingssystemen, ons vakmanschap en kwaliteit spreken voor zich. Bekijk onze gallerij voor
+                        inspiratie en neem vandaag nog contact met ons op voor uw project.</p>
+
+                </div>
             </div>
 
-            <div class="badkamer">
-                <div class="numbertext">2 / 12</div>
-                <img src="./fotos/realisatie1.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-
-            <div class="badkamer">
-                <div class="numbertext">3 / 12</div>
-                <img src="./fotos/realisatie2.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-
-            <div class="badkamer">
-                <div class="numbertext">4 / 12</div>
-                <img src="./fotos/realisatie3.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-
-            <div class="badkamer">
-                <div class="numbertext">5 / 12</div>
-                <img src="./fotos/bad.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-
-            <div class="badkamer">
-                <div class="numbertext">6 / 12</div>
-                <img src="./fotos/vloerverwarming.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-            <div class="badkamer">
-                <div class="numbertext">7 / 12</div>
-                <img src="./fotos/regenwater.jpg">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-            <div class="badkamer">
-                <div class="numbertext">8 / 12</div>
-                <img src="./fotos/warmtepomp.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-            <div class="badkamer">
-                <div class="numbertext">9 / 12</div>
-                <img src="./fotos/verwarming1.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-            <div class="badkamer">
-                <div class="numbertext">10 / 12</div>
-                <img src="./fotos/gas.jpg">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-            <div class="badkamer">
-                <div class="numbertext">11 / 12</div>
-                <img src="./fotos/gas.png">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-            <div class="badkamer">
-                <div class="numbertext">12 / 12</div>
-                <img src="./fotos/mazout.jpg">
-                <div class="prevPos"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
-                <div class="nextPos"><a class="next" onclick="plusSlides1(1)">❯</a></div>
-            </div>
-
-
-            <div class="reaText">
-                <h3 class="reaTiteltje">Realisaties</h3>
-                <p class="reaUitleg">Ontdek onze <strong>portfolio</strong> van sanitair- en verwarmingsprojecten.</p>
-                <p class="reaUitleg">We hebben ruime<strong> ervaring </strong>in het leveren van op maat gemaakte
-                    oplossingen voor residentiële en commerciële klanten. Van prachtige badkamers tot efficiënte
-                    verwarmingssystemen, ons vakmanschap en kwaliteit spreken voor zich. Bekijk onze gallerij voor
-                    inspiratie en neem vandaag nog contact met ons op voor uw project.</p>
-
+            <div class="sleepContainer">
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <div class="verdwijn">
+                    <div class="row">
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/badkamer.jpg" onclick="huidigeDia(1)"
+                                alt="lavabo zwart">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/realisatie1.png" onclick="huidigeDia(2)" alt="douche">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/realisatie2.png" onclick="huidigeDia(3)" alt="bad">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/realisatie3.png" onclick="huidigeDia(4)"
+                                alt="lavabo wit">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/bad.png" onclick="huidigeDia(5)" alt="bad">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/vloerverwarming.png" onclick="huidigeDia(6)"
+                                alt="Vloerverwarming Buderus">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/regenwater.png" onclick="huidigeDia(7)" alt="bad">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/warmtepomp.png" onclick="huidigeDia(8)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/verwarming1.png" onclick="huidigeDia(9)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/gas.jpg" onclick="huidigeDia(10)" alt="bad">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/gas.png" onclick="huidigeDia(11)" alt="Beschrijving6">
+                        </div>
+                        <div class="column">
+                            <img class="bad cursor" src="./fotos/mazout.jpg" onclick="huidigeDia(12)"
+                                alt="Beschrijving6">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="sleepContainer">
-            <div class="caption-container">
-                <p id="caption"></p>
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+
+        <div id="toonSanitair" class="verbergSanitair">
+            <div class="container1">
+                <div id="fotoKlik2" class="sanitair">
+                    <div class="numbertext1">1 / 12</div>
+                    <img class="imgSan" src="./fotos/badkamer.jpg">
+
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+                <div class="sanitair">
+                    <div class="numbertext1">2 / 12</div>
+                    <img class="imgSan" src="./fotos/realisatie1.png">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+
+                <div class="sanitair">
+                    <div class="numbertext1">3 / 12</div>
+                    <img class="imgSan" src="./fotos/realisatie2.png">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+
+                <div class="sanitair">
+                    <div class="numbertext1">4 / 12</div>
+                    <img class="imgSan" src="./fotos/realisatie3.png">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+
+                <div class="sanitair">
+                    <div class="numbertext1">5 / 12</div>
+                    <img class="imgSan" src="./fotos/bad.png">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+
+                <div class="sanitair">
+                    <div class="numbertext1">6 / 12</div>
+                    <img class="imgSan" src="./fotos/vloerverwarming.png">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+                <div class="sanitair">
+                    <div class="numbertext1">7 / 12</div>
+                    <img class="imgSan" src="./fotos/regenwater.jpg">
+                    <div class="prevPos1"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+                <div class="sanitair">
+                    <div class="numbertext1">8 / 12</div>
+                    <img class="imgSan" src="./fotos/warmtepomp.png">
+                    <div class="prevPos1"><a class="prev" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+                <div class="sanitair">
+                    <div class="numbertext1">9 / 12</div>
+                    <img class="imgSan" src="./fotos/verwarming1.png">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+                <div class="sanitair">
+                    <div class="numbertext1">10 / 12</div>
+                    <img class="imgSan" src="./fotos/gas.jpg">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+                <div class="sanitair">
+                    <div class="numbertext1">11 / 12</div>
+                    <img class="imgSan" src="./fotos/gas.png">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+                <div class="sanitair">
+                    <div class="numbertext1">12 / 12</div>
+                    <img class="imgSan" src="./fotos/mazout.jpg">
+                    <div class="prevPos1"><a class="prev1" onclick="plusSlides1(-1)">❮</a></div>
+                    <div class="nextPos1"><a class="next1" onclick="plusSlides1(1)">❯</a></div>
+                </div>
+
+                <div class="reaText1">
+                    <h3 class="reaTiteltje1">Sanitair realisaties</h3>
+                    <p class="reaUitleg1">Ontdek onze <strong>portfolio</strong> van sanitair- en verwarmingsprojecten.
+                    </p>
+                    <p class="reaUitleg1">We hebben ruime<strong> ervaring </strong>in het leveren van op maat gemaakte
+                        oplossingen voor residentiële en commerciële klanten. Van prachtige badkamers tot efficiënte
+                        verwarmingssystemen, ons vakmanschap en kwaliteit spreken voor zich. Bekijk onze gallerij voor
+                        inspiratie en neem vandaag nog contact met ons op voor uw project.</p>
+
+                </div>
             </div>
-            <div class="verdwijn">
-                <div class="row">
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/badkamer.jpg" onclick="huidigeDia(1)" alt="lavabo zwart">
+
+            <div class="sleepContainer1">
+                <div class="caption-container1">
+                    <p id="caption1"></p>
+                </div>
+                <div class="verdwijn1">
+                    <div class="row1">
+                        <div class="column1">
+                            <img class="san cursor" src="./fotos/badkamer.jpg" onclick="huidigeDia1(1)"
+                                alt="lavabo zwart">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/realisatie1.png" onclick="huidigeDia1(2)"
+                                alt="douche">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/realisatie2.png" onclick="huidigeDia1(3)" alt="bad">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/realisatie3.png" onclick="huidigeDia1(4)"
+                                alt="lavabo wit">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/bad.png" onclick="huidigeDia1(5)" alt="bad">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/vloerverwarming.png" onclick="huidigeDia1(6)"
+                                alt="Vloerverwarming Buderus">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/regenwater.png" onclick="huidigeDia1(7)" alt="bad">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/warmtepomp.png" onclick="huidigeDia1(8)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/verwarming1.png" onclick="huidigeDia1(9)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/gas.jpg" onclick="huidigeDia1(10)" alt="bad">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/gas.png" onclick="huidigeDia1(11)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column1">
+                            <img class="san cursor1" src="./fotos/mazout.jpg" onclick="huidigeDia1(12)"
+                                alt="Beschrijving6">
+                        </div>
                     </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/realisatie1.png" onclick="huidigeDia(2)" alt="douche">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/realisatie2.png" onclick="huidigeDia(3)" alt="bad">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/realisatie3.png" onclick="huidigeDia(4)" alt="lavabo wit">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/bad.png" onclick="huidigeDia(5)" alt="bad">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/vloerverwarming.png" onclick="huidigeDia(6)"
-                            alt="Vloerverwarming Buderus">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/regenwater.png" onclick="huidigeDia(7)" alt="bad">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/warmtepomp.png" onclick="huidigeDia(8)" alt="Beschrijving6">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/verwarming1.png" onclick="huidigeDia(9)" alt="Beschrijving6">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/gas.jpg" onclick="huidigeDia(10)" alt="bad">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/gas.png" onclick="huidigeDia(11)" alt="Beschrijving6">
-                    </div>
-                    <div class="column">
-                        <img class="bad cursor" src="./fotos/mazout.jpg" onclick="huidigeDia(12)" alt="Beschrijving6">
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+        <div id="toonKoeling" class="verbergKoeling">
+            <div class="container2">
+                <div id="fotoKlik2" class="koeling">
+                    <div class="numbertext1">1 / 12</div>
+                    <img class="imgKoel" src="./fotos/badkamer.jpg">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next1" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+                <div class="koeling">
+                    <div class="numbertext1">2 / 12</div>
+                    <img class="imgKoel" src="./fotos/realisatie1.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+
+                <div class="koeling">
+                    <div class="numbertext1">3 / 12</div>
+                    <img class="imgKoel" src="./fotos/realisatie2.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+
+                <div class="koeling">
+                    <div class="numbertext1">4 / 12</div>
+                    <img class="imgKoel" src="./fotos/realisatie3.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+
+                <div class="koeling">
+                    <div class="numbertext1">5 / 12</div>
+                    <img class="imgKoel" src="./fotos/bad.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+
+                <div class="koeling">
+                    <div class="numbertext1">6 / 12</div>
+                    <img class="imgKoel" src="./fotos/vloerverwarming.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+                <div class="koeling">
+                    <div class="numbertext1">7 / 12</div>
+                    <img class="imgKoel" src="./fotos/regenwater.jpg">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+                <div class="koeling">
+                    <div class="numbertext1">8 / 12</div>
+                    <img class="imgKoel" src="./fotos/warmtepomp.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+                <div class="koeling">
+                    <div class="numbertext1">9 / 12</div>
+                    <img class="imgKoel" src="./fotos/verwarming1.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+                <div class="koeling">
+                    <div class="numbertext1">10 / 12</div>
+                    <img class="imgKoel" src="./fotos/gas.jpg">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+                <div class="koeling">
+                    <div class="numbertext1">11 / 12</div>
+                    <img class="imgKoel" src="./fotos/gas.png">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next1" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+                <div class="koeling">
+                    <div class="numbertext1">12 / 12</div>
+                    <img class="imgKoel" src="./fotos/mazout.jpg">
+                    <div class="prevPos2"><a class="prev2" onclick="plusSlides2(-1)">❮</a></div>
+                    <div class="nextPos2"><a class="next2" onclick="plusSlides2(1)">❯</a></div>
+                </div>
+
+                <div class="reaText2">
+                    <h3 class="reaTiteltje2">Koeling realisaties</h3>
+                    <p class="reaUitleg2">Ontdek onze <strong>portfolio</strong> van sanitair- en verwarmingsprojecten.
+                    </p>
+                    <p class="reaUitleg2">We hebben ruime<strong> ervaring </strong>in het leveren van op maat gemaakte
+                        oplossingen voor residentiële en commerciële klanten. Van prachtige badkamers tot efficiënte
+                        verwarmingssystemen, ons vakmanschap en kwaliteit spreken voor zich. Bekijk onze gallerij voor
+                        inspiratie en neem vandaag nog contact met ons op voor uw project.</p>
+
+                </div>
+            </div>
+
+            <div class="sleepContainer2">
+                <div class="caption-container2">
+                    <p id="caption2"></p>
+                </div>
+                <div class="verdwijn2">
+                    <div class="row2">
+                        <div class="column2">
+                            <img class="koel cursor" src="./fotos/badkamer.jpg" onclick="huidigeDia2(1)"
+                                alt="lavabo zwart">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/realisatie1.png" onclick="huidigeDia2(2)"
+                                alt="douche">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/realisatie2.png" onclick="huidigeDia2(3)" alt="bad">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/realisatie3.png" onclick="huidigeDia2(4)"
+                                alt="lavabo wit">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/bad.png" onclick="huidigeDia2(5)" alt="bad">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/vloerverwarming.png" onclick="huidigeDia2(6)"
+                                alt="Vloerverwarming Buderus">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/regenwater.png" onclick="huidigeDia2(7)" alt="bad">
+                        </div>
+                        <div class="column2">
+                            <img class="koel curso2" src="./fotos/warmtepomp.png" onclick="huidigeDia2(8)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/verwarming1.png" onclick="huidigeDia2(9)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/gas.jpg" onclick="huidigeDia2(10)" alt="bad">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/gas.png" onclick="huidigeDia2(11)"
+                                alt="Beschrijving6">
+                        </div>
+                        <div class="column2">
+                            <img class="koel cursor2" src="./fotos/mazout.jpg" onclick="huidigeDia2(12)"
+                                alt="Beschrijving6">
+                        </div>
                     </div>
                 </div>
             </div>

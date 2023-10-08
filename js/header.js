@@ -49,9 +49,9 @@ function setupNavigationInteractions() {
     });
   });
 
-  document.querySelector(".big-button").addEventListener("click", () => {
-    location.href = "realisaties.html";
-  });
+  // document.querySelector(".big-button").addEventListener("click", () => {
+  //   location.href = "realisaties.html";
+  // });
 }
 
 

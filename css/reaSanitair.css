@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing : border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.verbergSanitair {
+    display: none;
+}
+
+
+
+
+.fotoKlik {
+    /* make full screen */
+    position  : fixed;
+    z-index   : 9999;
+    top       : 0;
+    left      : 0;
+    right     : 0;
+    bottom    : 0;
+    margin    : auto;
+    width     : 90% !important;
+    height    : 90% !important;
+    /* disable scrolling */
+    overflow  : hidden;
+    /* transition effect. not necessary */
+    transition: 0.3s;
+
+
+
+}
+
+.reaTiteltje1 {
+    font-size  : 1.5em;
+    font-weight: 600;
+    margin     : 0;
+    padding    : 0;
+    text-align : center;
+}
+
+.imgSan {
+    vertical-align: middle;
+}
+
+.sleepContainer1 .row1 img {
+    width : 100%;
+    height: 100%;
+}
+
+.container1 {
+    display : flex;
+    position: relative;
+    margin: auto;
+    max-width: 1170px;
+    justify-content: center;
+    text-align: center;
+}
+
+.container1 .sanitair .imgSan {
+    width        : 570px;
+    height       : 370px;
+    border-radius: 10px;
+    /* cursor    : pointer; */
+}
+
+.container1 .row1 .imgSan {
+    width : 100%;
+    height: 100%;
+}
+
+/* .sanitair {
+  display: none;
+} */
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev1 {
+    cursor             : pointer;
+    position           : absolute;
+    top                : 55%;
+    margin-left        : -24.4%;
+    width              : auto;
+    padding            : 16px;
+    margin-top         : -50px;
+    color              : #fff;
+    font-weight        : bold;
+    font-size          : 20px;
+    border-radius      : 0 3px 3px 0;
+    user-select        : none;
+    -webkit-user-select: none;
+}
+
+
+.next1 {
+    cursor             : pointer;
+    position           : absolute;
+    top                : 55%;
+    margin-right       : 51.3%;
+    padding            : 16px;
+    margin-top         : -50px;
+    color              : #fff;
+    font-weight        : bold;
+    font-size          : 20px;
+    border-radius      : 3px 0 0 3px;
+    user-select        : none;
+    -webkit-user-select: none;
+}
+
+.next1 {
+    right        : 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev1:hover,
+.next1:hover {
+    background-color: #161f7a;
+    color           : #ccc;
+}
+
+.numbertext1 {
+    color    : #f2f2f2;
+    font-size: 12px;
+    padding  : 8px 12px;
+    position : absolute;
+    top      : 0;
+}
+
+.caption-container1 {
+    text-align      : center;
+    background-color: #161f7a;
+    padding         : 10px 16px;
+    color           : white;
+    border-radius   : 10px 10px 0 0;
+}
+
+#caption1 {
+    color      : #ccc;
+    font-size  : 32px;
+    padding    : 10px 12px;
+    max-width  : 1000px;
+    font-weight: 600;
+    text-align : center;
+}
+
+@media only screen and (min-width: 1200px) {
+    #caption1 {
+        margin-left: 80px;
+    }
+}
+
+.row1:after {
+    content: "";
+    display: table;
+    clear  : both;
+    width  : 100%;
+}
+
+.column1 {
+    float : left;
+    width : 16.663%;
+    border: #161f7a 2px solid;
+
+}
+
+.san {
+    opacity: 0.6;
+}
+
+.active {
+    border-bottom: 5px solid blue;
+
+}
+
+.active,
+.san:hover {
+    opacity: 1;
+}
+
+.sleepContainer1 {
+    position     : relative;
+    max-width    : 1200px;
+    align-items  : center;
+    margin       : 0 auto;
+    margin-top   : 50px;
+    margin-bottom: 50px;
+}
+
+
+
+.sleepContainer .sanitair {
+    width : 320px;
+    height: auto;
+}
+
+.row1 {
+    border: solid 2px #161f7a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sleepContainer .row1 .imgSan {
+    width : 100%;
+    height: 100%;
+}
+
+.sanitair {
+    display: none;
+}
+
+.cursor1 {
+    cursor: pointer;
+}
+
+.reaUitleg1 {
+    font-size   : 20px;
+    font-weight : 400;
+    line-height : 1.5;
+    text-align  : left;
+    margin-left : 20px;
+    margin-right: 20px;
+    max-width   : 800px;
+    margin-top  : 25px;
+}
+
+@media screen and (max-width: 1300px) {
+    .container1 {
+        width  : 100%;
+        display: block;
+    }
+
+    .container1 .sanitair {
+        position     : relative;
+        margin       : auto;
+        padding      : 10px;
+        margin-bottom: 50px;
+    }
+
+    .prevPos1 {
+        top     : 55%;
+        position: absolute;
+    }
+
+    .nextPos1 {
+        top     : 55%;
+        right   : 20.9%;
+        position: absolute;
+    }
+
+    .container1 .sanitair .imgSan {
+        width : 95%;
+        margin: 0 auto;
+        height: 80%;
+    }
+
+    .container1 .sanitair .prevPos1 {
+        margin-left: 2.5%;
+    }
+
+    .container1 .sanitair .nextPos1 {
+        margin-right: -17.5%;
+    }
+
+    .numbertext1 {
+        top : 5%;
+        left: 5%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .verdwijn,
+    .caption-container1 {
+        display: none;
+    }
+
+    .prev1:hover,
+    .next1:hover {
+        background-color: transparent;
+        color           : #ccc;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .prevPos1,
+    .nextPos1 {
+        top: 63%;
+    }
+
+    .numbertext1 {
+        top: 5%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .titel1 {
+        font-size: 20px;
+    }
+}
+
+strong {
+    font-weight: 600;
+    color      : #161f7a;
+}
+
+@media only screen and (max-width: 450px) {
+
+    .reaContainer1 .imgSan {
+        width : 300px;
+        height: auto;
+    }
+
+    .reaUitleg1 {
+        margin-left : 20px;
+        margin-right: 20px;
+    }
+}

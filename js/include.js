@@ -11,7 +11,7 @@ function insertNavigationMenu() {
           <ul class="submenu">
             <li class="subitem"><a href="verwarming.html">VERWARMING</a></li>
             <li class="subitem"><a href="sanitair.html">SANITAIR</a></li>
-            <li class="subitem"><a href="cooling.html">COOLING</a></li>
+            <li class="subitem"><a href="cooling.html">KOELING</a></li>
             <li class="subitem"><a href="onderhoud.html">ONDERHOUD</a></li>
           </ul>
         </li>

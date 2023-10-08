@@ -6,37 +6,95 @@
 
 }
 
+.verbergSanitair {
+  display: none;
+}
+
+.opties {
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+  flex-flow      : wrap;
+  margin-left    : 20%;
+  margin-right   : 20%;
+  margin-top     : 1%;
+  margin-bottom  : 3%;
+  margin-left    : 25%;
+  margin-right   : 25%;
+}
+
+.keuze {
+  background-color: #fff;
+  color           : #161f7a;
+  border: 2px solid #161f7a;
+  font-weight: bold;
+  padding         : 15px 20px;
+  border          : none;
+  border-radius   : 5px;
+  cursor          : pointer;
+  margin          : 0 10px;
+  font-size       : 20px;
+  transition      : background-color 0.3s ease;
+  align-items     : center;
+  justify-content : center;
+  border: 2px solid #161f7a;
+}
+
+.aangeDuid {
+  background-color: #000000;
+  color           : #161f7a;
+  border: 2px solid #161f7a;
+  font-weight: bold;
+  padding         : 15px 20px;
+  border          : none;
+  border-radius   : 5px;
+  cursor          : pointer;
+  margin          : 0 10px;
+  font-size       : 20px;
+  transition      : background-color 0.3s ease;
+  align-items     : center;
+  justify-content : center;
+  border: 2px solid #161f7a;
+}
+
+.keuze:hover {
+  background-color: #161f7a;
+  color           : white;
+  font-weight: 100;
+}
+
+
 .fotoKlik {
   /* make full screen */
-  position: fixed;
-  z-index : 9999;
-  top     : 0;
-  left    : 0;
-  right   : 0;
-  bottom  : 0;
-  margin  : auto;
-  width: 90% !important;
-  height: 90% !important;
+  position  : fixed;
+  z-index   : 9999;
+  top       : 0;
+  left      : 0;
+  right     : 0;
+  bottom    : 0;
+  margin    : auto;
+  width     : 90% !important;
+  height    : 90% !important;
   /* disable scrolling */
-  overflow: hidden;
+  overflow  : hidden;
   /* transition effect. not necessary */
   transition: 0.3s;
 
- 
+
 
 }
 
 .close {
-  display: none;
-  position: fixed;
-  top     : 55px;
-  right   : 135px;
-  color   : #161f7a;
-  font-size: 40px;
+  display    : none;
+  position   : fixed;
+  top        : 55px;
+  right      : 135px;
+  color      : #161f7a;
+  font-size  : 40px;
   font-weight: 900;
-  transition: 0.3s;
-  cursor: pointer;
-  z-index: 99999999999;
+  transition : 0.3s;
+  cursor     : pointer;
+  z-index    : 99999999999;
 }
 
 .close.show {
@@ -45,9 +103,9 @@
 
 .close:hover,
 .close:focus {
-  color     : #bbb;
+  color          : #bbb;
   text-decoration: none;
-  cursor: pointer;
+  cursor         : pointer;
 }
 
 main {
@@ -83,7 +141,7 @@ img {
   width        : 570px;
   height       : 370px;
   border-radius: 10px;
-  /* cursor: pointer; */
+  /* cursor    : pointer; */
 }
 
 .container .row img {
@@ -341,7 +399,7 @@ strong {
   color      : #161f7a;
 }
 
-.box {
+/* .box {
   height         : auto;
   display        : flex;
   flex-direction : column;
@@ -350,9 +408,9 @@ strong {
   margin-left    : 10%;
   margin-right   : 10%;
   margin-top     : 1%;
-}
+} */
 
-.boxes {
+/* .boxes {
   width        : 300px;
   height       : 400px;
   margin       : 20px;
@@ -363,7 +421,7 @@ strong {
   border-radius: 5px;
   margin-bottom: 8%;
   cursor       : pointer;
-}
+} */
 
 
 .boxes:hover {
@@ -464,7 +522,7 @@ strong {
   }
 
   .partners {
-    margin-bottom  : 100px;
+    margin-bottom: 100px;
   }
 }
 
@@ -488,10 +546,6 @@ strong {
     margin-right: -15.5%;
   }
 }
-
-
-
-
 
 .partner {
   position     : relative;
