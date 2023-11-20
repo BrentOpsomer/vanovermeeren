@@ -77,6 +77,25 @@ section {
     max-width : 300px;
 }
 
+.reaButtonPos button {
+    margin-top      : 25px;
+    margin-bottom   : 50px;
+    display         : inline-block;
+    padding         : 10px 15px;
+    font-size       : 18px;
+    font-weight     : bold;
+    text-transform  : uppercase;
+    border          : solid 2px #8bb2e9;
+    border-radius   : 20px;
+    background-color: #8bb2e9;
+    color           : #161f7a;
+    transition      : background-color 0.3s ease;
+    letter-spacing  : 1px;
+    transition      : background-color 0.3s ease, transform 0.2s ease;
+    box-shadow      : rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    cursor          : pointer;
+}
+
 /* media query 1500px display block verwarmingstext */
 @media screen and (max-width: 1500px) {
     .verwarmingsText {
