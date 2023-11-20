@@ -198,7 +198,7 @@
 }
 
 .row1 {
-    border: solid 2px #161f7a;
+    /* border: solid 2px #161f7a; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
