@@ -7,7 +7,7 @@
 }
 
 .koelKnop {
-  display: none;
+  display: none !important;
 }
 
 .verbergSanitair {
