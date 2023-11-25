@@ -247,6 +247,13 @@ img {
   width  : 100%;
 }
 
+.row1:after {
+  content: "";
+  display: table;
+  clear  : both;
+  width  : 100%;
+}
+
 .column {
   float : left;
   width : 16.663%;
@@ -566,4 +573,48 @@ strong {
   width      : 60%;
   margin-left: 20%;
   color      : #161f7a;
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .opties {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    flex-flow      : wrap;
+    margin-top     : 1%;
+    margin-bottom  : 3%;
+    margin-left    : 25%;
+    margin-right   : 25%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .opties {
+
+    margin-left    : 10%;
+    margin-right   : 10%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .opties {
+
+    margin-left    : 5%;
+    margin-right   : 5%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .opties {
+
+    justify-content: space-around;
+
+    margin-left    : 5%;
+    margin-right   : 5%;
+  }
+
+  .keuze {
+    padding: 10px;
+  }
 }
