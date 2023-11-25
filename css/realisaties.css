@@ -6,6 +6,10 @@
 
 }
 
+.koelKnop {
+  display: none;
+}
+
 .verbergSanitair {
   display: none;
 }
