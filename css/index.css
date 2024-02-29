@@ -11,6 +11,17 @@ body {
 }
 
 
+
+.links {
+    margin-right: 10px;
+    /* Ruimte tussen linker- en rechterwoord */
+}
+
+.rechts {
+    margin-left: 10px;
+    /* Ruimte tussen linker- en rechterwoord */
+}
+
 button#scrollToTopBtn {
     display         : none;
     position        : fixed;
@@ -47,15 +58,14 @@ button#scrollToTopBtn:hover {
 }
 
 .containerHead button {
-    margin-top      : 25px;
+    margin-top      : 20px;
     display         : inline-block;
     padding         : 10px 15px;
     font-size       : 18px;
     font-weight     : bold;
     text-transform  : uppercase;
-    border          : solid 2px #8bb2e9;
     border-radius   : 20px;
-    background-color: #8bb2e9;
+    background-color: #ffffff;
     color           : #161f7a;
     transition      : background-color 0.3s ease;
     letter-spacing  : 1px;
@@ -82,8 +92,39 @@ button#scrollToTopBtn:hover {
     padding-top        : 300px;
     padding-bottom     : 450px;
     min-height         : 90vh;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
 }
 
+.containerHead {
+    text-align: center;
+}
+
+.titel {
+    font-weight  : 600;
+    font-size    : 40px;
+    color        : #ffffff;
+    padding      : 15px;
+    border-radius: 10px 10px 0 0;
+    text-shadow  : 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.woorden {
+    display        : flex;
+    color          : #ffffff;
+    font-size      : 20px;
+    padding        : 10px;
+    justify-content: space-around;
+    font-weight    : bold;
+    border-radius  : 0 0 10px 10px;
+    text-shadow    : 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.links,
+.rechts {
+    margin: 0 10px;
+}
 
 
 
@@ -633,13 +674,14 @@ iframe {
     }
 
     .containerHead {
-        max-width  : 1200px;
-        margin     : 0 auto;
-        padding    : 0 15px;
-        align-items: center;
-
+        max-width      : 1200px;
+        padding        : 0 15px;
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        margin-top: -250px; /* Pas de waarde aan naar jouw voorkeur */
     }
-
 }
 
 /* @media screen and (max-width: 1000px) {
@@ -740,11 +782,11 @@ iframe {
 
 @media screen and (max-width: 500px) {
     .reaContainer {
-
         margin-left : 20%;
         margin-right: 20%;
-
     }
+
+
 
     .reaContainer img {
         width        : 300px;
