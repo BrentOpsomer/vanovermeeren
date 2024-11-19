@@ -1,0 +1,84 @@
+/* Overlay achtergrond */
+.overlay {
+    display         : none;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index         : 9999;
+    justify-content : center;
+    align-items     : center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position                                         : relative;
+    width                                            : 80%;
+    /* Neem 80% van de schermbreedte */
+    max-width                                        : 1000px;
+    /* Beperk de maximale breedte */
+    aspect-ratio                                     : 16 / 11;
+    /* Houd een vaste verhouding aan (bijvoorbeeld 16:9) */
+    display                                          : flex;
+    justify-content                                  : center;
+    align-items                                      : center;
+    overflow                                         : hidden;
+    /* Verberg alles buiten de container */
+}
+
+/* Slideshow afbeelding */
+.slideshow-container img {
+    width        : 100%;
+    /* Vul altijd de containerbreedte */
+    height       : 100%;
+    /* Vul altijd de containerhoogte */
+    object-fit   : cover;
+    /* Vul de container zonder vervorming, bijsnijden waar nodig */
+    border-radius: 8px;
+}
+
+
+
+/* Vorige/Volgende knoppen */
+.slide-btn {
+    position   : absolute;
+    top        : 50%;
+    transform  : translateY(-50%);
+    font-size  : 30px;
+    color      : white;
+    background : none;
+    border     : none;
+    cursor     : pointer;
+    z-index    : 10000;
+    padding    : 10px;
+    font-weight: bold;
+}
+
+.slide-btn:hover {
+    color: #ccc;
+}
+
+.slide-prev {
+    left: 0;
+}
+
+.slide-next {
+    right: 0;
+}
+
+/* Sluitknop */
+.overlay-close {
+    position   : absolute;
+    top        : 20px;
+    right      : 20px;
+    font-size  : 30px;
+    color      : white;
+    cursor     : pointer;
+    background : none;
+    border     : none;
+    outline    : none;
+    font-weight: bold;
+    z-index    : 10000;
+}

@@ -3,7 +3,7 @@ function insertNavigationMenu() {
   const navigationMenu = `
     <nav>
       <ul class="menu">
-        <div class="logo">
+        <div class="logo" onclick="window.location.href='index';">
         <p class="naam">VAN OVERMEEREN bv</p>
         <img src="fotos/logoHeader.png">
         </div>
@@ -13,8 +13,8 @@ function insertNavigationMenu() {
           <ul class="submenu">
             <li class="subitem"><a href="verwarming">VERWARMING</a></li>
             <li class="subitem"><a href="sanitair">SANITAIR</a></li>
-            <li class="subitem"><a href="koeling">KOELING</a></li>
-            <li class="subitem"><a href="onderhoud">ONDERHOUD</a></li>
+            <li class="subitem"><a href="koeling">VENTILATIE</a></li>
+            <li class="subitem"><a href="airconditioning">AIRCONDITIONING</a></li>
           </ul>
         </li>
         <li class="item"><a href="realisaties">REALISATIES</a></li>

@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="./css/verwarming.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/overlay.css">
     <script src="./js/include.js" type="module" defer></script>
     <script src="./js/header.js" defer></script>
+    <script src="./js/overlayVerwarming.js" defer></script>
+
     <title>verwarming</title>
 </head>
 
@@ -28,13 +31,14 @@
         <section>
             <div class="verwarmingsText">
                 <div class="links">
-                    <h2>Wij werken voornamelijk met het merk Buderus, dit om een optimale service te kunnen bieden.</h2>
+                    <h2>Wij werken enkel met de ketels van Buderus, dit om een optimale service te kunnen bieden.</h2>
                     <div class="buderus">
                         <div class="logoPos">
                             <img src="./fotos/buderuslogo.png">
                         </div>
                         <div class="buderusTextDiv">
-                            <p class="text">Hieronder vindt u een aantal van onze verwarming gerelateerde realisaties.</p>
+                            <p class="text">Hieronder vindt u een aantal van onze verwarming gerelateerde realisaties.
+                            </p>
                             <button onclick="location.href='realisaties.html'">Bekijk al onze realisaties</button>
                         </div>
                     </div>
@@ -57,9 +61,18 @@
                 <div class="soort"><img src="./fotos/vloerverwarming.png" alt="verwarming1">
                     <p class="soortText">Vloerverwarming</p>
                 </div>
-
             </div>
         </section>
+        <div id="overlay" class="overlay">
+            <button class="overlay-close" onclick="closeOverlay()">×</button>
+            <div class="slideshow-container">
+                <img id="slideshow-image" src="" alt="Slideshow Image">
+                <button class="slide-btn slide-prev" onclick="prevSlide()">‹</button>
+                <button class="slide-btn slide-next" onclick="nextSlide()">›</button>
+            </div>
+        </div>
+
+
     </main>
     <footer id="footer-placeholder">
 

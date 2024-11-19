@@ -6,14 +6,14 @@ html {
 }
 
 .verwarming {
-    background-image: url(../fotos/gas.png);
-    background-repeat: no-repeat;
+    background-image   : url(../fotos/gas.png);
+    background-repeat  : no-repeat;
     background-position: center;
-    width           : 100%;
-    /* color        : #161f7a; */
-    padding-top     : 200px;
-    padding-bottom  : 200px;
-    background-size : cover;
+    width              : 100%;
+    /* color           : #161f7a; */
+    padding-top        : 200px;
+    padding-bottom     : 200px;
+    background-size    : cover;
 
 
 }
@@ -47,7 +47,7 @@ section {
 }
 
 .links {
-    margin-top : 35px;
+    margin-top: 35px;
 }
 
 .verwarmingsText {
@@ -60,14 +60,14 @@ section {
 }
 
 .verwarmingsText h2 {
-    font-size  : 30px;
-    line-height: 1.5;
-    text-align : left;
-    max-width  : 800px;
-    margin-top : 25px;
+    font-size    : 30px;
+    line-height  : 1.5;
+    text-align   : left;
+    max-width    : 800px;
+    margin-top   : 25px;
     margin-bottom: 25px;
-    margin-left: 180px;
-    color      : #161f7a;
+    margin-left  : 180px;
+    color        : #161f7a;
 }
 
 .buderusTextDiv {
@@ -76,7 +76,7 @@ section {
     align-items   : center;
     position      : relative;
     margin-top    : 25px;
-    margin-right: 100px;
+    margin-right  : 100px;
 }
 
 .buderusTextDiv button {
@@ -210,12 +210,12 @@ section {
 @media screen and (max-width: 1000px) {
 
     .verwarmingsText h2 {
-        text-align  : center;
-        max-width   : 1400px;
-        margin-left : 100px;
-        margin-right: 100px;
+        text-align   : center;
+        max-width    : 1400px;
+        margin-left  : 100px;
+        margin-right : 100px;
         margin-bottom: 50px;
-        margin-top: 50px;
+        margin-top   : 50px;
     }
 
     .verwarmingsText .text {
@@ -229,9 +229,7 @@ section {
 }
 
 @media screen and (max-width: 700px) {
-    .logoPos img {
-     
-    }
+    .logoPos img {}
 }
 
 
@@ -268,14 +266,21 @@ section {
     margin-bottom  : 50px;
     left           : 0;
     right          : 0;
-    
+
 }
 
 .soort {
-    margin : 10px;
-    padding: 0;
-    display: flex;
+    margin        : 10px;
+    padding       : 0;
+    display       : flex;
     flex-direction: column;
+    transition    : transform 0.3s ease-in-out;
+    /* Zorg voor een vloeiende overgang van 0.3 seconden */
+}
+
+.soort:hover {
+    cursor   : pointer;
+    transform: scale(1.1);
 
 }
 
@@ -287,10 +292,10 @@ section {
     font-size       : 50px;
     transition      : 0.5s;
     border-radius   : 10px 10px 0 0;
-    padding: 0;
-    margin: 0;
-    left  : 0;
-    right : 0;
+    padding         : 0;
+    margin          : 0;
+    left            : 0;
+    right           : 0;
 }
 
 .soortText {
@@ -300,4 +305,5 @@ section {
     padding         : 10px;
     background-color: #161f7a;
     color           : #fff;
+    border-radius   : 0 0 10px 10px;
 }
