@@ -148,18 +148,19 @@ main {
 }
 
 .meer {
-    cursor       : pointer;
+    display: none;
+    /* cursor       : pointer;
     position     : absolute;
-    top          : 14%;
+    top          : 12%;
     margin-right : auto;
-    margin-left  : 760px;
+    margin-left  : 72.5%;
     padding      : 16px;
     margin-top   : -50px;
     color        : #161f7a;
     font-weight  : bold;
     font-size    : 30px;
     border-radius: 3px 0 0 3px;
-    z-index      : 10;
+    z-index      : 10; */
 }
 
 
@@ -174,11 +175,11 @@ main {
 
 .textRight {
     position    : relative;
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
 
 .imageLeft {
-    margin-right  : -150px;
+    /* margin-right  : -150px; */
     left          : 0;
     box-shadow    : rgba(0, 0, 0, 0.25) 0px 5px 15px;
     border-radius : 15px;
@@ -211,13 +212,13 @@ main {
 }
 
 .overOnsFlex {
-    display        : flex;
-    flex-direction : row;
+    display        : inline-block;
+    /* flex-direction : row; */
     justify-content: center;
     align-items    : center;
-    margin-top     : 25px;
+    /* margin-top     : 25px; */
     width          : 75%;
-    margin-left    : 15.25%;
+    /* margin-left    : 7.5%; */
     height         : 500px;
     box-sizing     : border-box;
     font-size      : 50px;
@@ -237,8 +238,9 @@ main {
 
 
 .overOnsFlex .meerPic {
-    width        : 600px;
-    margin-left  : 235px;
+    width        : 80%;
+    margin: 0 auto;
+    /* margin-left  : 235px; */
     border-radius: 10px;
     position     : relative;
     cursor       : pointer;
@@ -598,69 +600,14 @@ iframe {
     }
 }
 
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 1500px) {
     .imageLeft {
         margin-top     : 125px;
         width          : 90%;
         justify-content: center;
         align-items    : center;
     }
-}
-
-@media screen and (max-width: 1300px) {
-    .overOnsFlex {
-        flex-direction : column;
-        height         : 750px;
-        justify-content: center;
-        margin-left    : 12.5%;
-        margin-top     : 100px;
-        padding-bottom : 500px;
-    }
-
-    .wie {
-        display: none;
-    }
-
-    .textRight {
-        margin-top     : 25px;
-        width          : 90%;
-        justify-content: center;
-        align-items    : center;
-    }
-
-
-    .imageLeft {
-        margin-top     : 500px;
-        margin-left    : 0 !important;
-        margin-right   : 0;
-        justify-content: center;
-    }
-
-    /* .text1,
-    .text2 {
-    } */
-
-    .meerPic {
-        width        : 100% !important;
-        border-radius: 10px;
-        position     : relative;
-        cursor       : pointer;
-        margin-left  : 50px !important;
-    }
-
-    .meer {
-        width: 0%;
-    }
-
-    .fa-circle-plus {
-        display: none !important;
-    }
-
-    .meerResBtn {
-        display      : block;
-        margin-bottom: 100px;
-    }
-}
+} */
 
 @media screen and (max-width: 1200px) {
     .logo-on-image {
@@ -693,11 +640,11 @@ iframe {
     }
 } */
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .imageLeft {
         margin-top: 325px;
     }
-}
+} */
 
 @media screen and (max-width: 800px) {
     .overOnsFlex {

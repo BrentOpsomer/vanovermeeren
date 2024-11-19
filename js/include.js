@@ -8,9 +8,8 @@ function insertNavigationMenu() {
         <img src="fotos/logoHeader.png">
         </div>
         <li class="item"><a href="index">HOME</a></li>
-        <li class="item"><a href="realisaties">REALISATIES</a></li>
         <li class="item has-submenu">
-          <a tabindex="0">SPECIALITEITEN</a>
+          <a tabindex="0">DIENSTEN</a>
           <ul class="submenu">
             <li class="subitem"><a href="verwarming">VERWARMING</a></li>
             <li class="subitem"><a href="sanitair">SANITAIR</a></li>
@@ -18,6 +17,7 @@ function insertNavigationMenu() {
             <li class="subitem"><a href="onderhoud">ONDERHOUD</a></li>
           </ul>
         </li>
+        <li class="item"><a href="realisaties">REALISATIES</a></li>
         <li class="item"><a href="#foot">CONTACT</a></li>
         <button class="navKnop" aria-controls="navigatie">
           <svg class="toggle" fill="var(--button-color)" viewBox="0 0 100 100" width="50">
