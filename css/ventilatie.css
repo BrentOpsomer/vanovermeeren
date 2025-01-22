@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
+.hero {
+  background-image: url(../fotos/onderhoud.png);
+  background-size: cover;
+  /* color        : #161f7a; */
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.buderus {
+  display: flex;
+}
+
+.logoPos img {
+  margin-left: 160px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 1600px;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.verwarmingsText h2 {
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 800px;
+  margin-top: 25px;
+  color: #161f7a;
+}
+
+.verwarmingsText .text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .verwarmingsText h2 {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .verwarmingsText .text {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 25px !important;
+  }
+
+  .verwarmingsText h2 {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .verwarmingsText .text {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+.soortenVerwarming {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+.soort {
+  margin: 0;
+  padding: 0;
+}
+
+.soortenVerwarming img {
+  width: 300px;
+  height: 230px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  font-size: 50px;
+  transition: 0.5s;
+  border-radius: 2px;
+  margin: 0;
+  left: 0;
+  right: 0;
+}
+
+.soortText {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #161f7a;
+  color: #fff;
+}
+
+.big-button {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: solid 2px #8bb2e9;
+  border-radius: 20px;
+  background-color: #8bb2e9;
+  color: #161f7a;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.big-button:hover {
+  cursor: pointer;
+  background-color: #2980b9;
+}
+
+
+.ventilatieSchetsen {
+  display: flex;
+  justify-content: center; /* Zorgt ervoor dat de items gecentreerd zijn */
+  align-items: center;
+  flex-wrap: wrap; /* Zorgt ervoor dat de items op een nieuwe regel springen op kleinere schermen */
+  gap: 20px; /* Ruimte tussen de div's */
+  margin: 20px; /* Buitenruimte rondom de container */
+}
+
+.ventilatieSchetsen .systemc {
+  flex: 1 1 calc(50% - 40px); /* Specifieke breedte voor de systemc div */
+  max-width: 400px; /* Beperk de maximale breedte */
+ 
+}
+
+.ventilatieSchetsen .systemd {
+  flex: 1 1 calc(50% - 40px); /* Specifieke breedte voor de systemd div */
+  max-width: 372px; /* Beperk de maximale breedte */
+ 
+}
+
+.ventilatieSchetsen img {
+  width: 100%; /* Afbeelding schaalt volledig met de container mee */
+  height: auto; /* Behoud de verhoudingen van de afbeelding */
+  border-radius: 8px; Optionele afronding van hoeken */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}

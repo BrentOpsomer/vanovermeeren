@@ -1,238 +1,234 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 html {
-    scroll-behavior: smooth;
-    font-family    : 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
 }
 
 .sanitair {
-    background-image: url(../fotos/sanitair.png);
-    background-size : cover;
-    /* color        : #161f7a; */
-    padding-top     : 200px;
-    padding-bottom  : 200px;
+  background-image: url(../fotos/sanitair.png);
+  background-size: cover;
+  /* color        : #161f7a; */
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 @media screen and (max-width: 600px) {
-    .sanitair {
-        background-image: url(../fotos/sanitairMobile.png);
-        background-size : cover;
-        /* color        : #161f7a; */
-        padding-top     : 200px;
-        padding-bottom  : 200px;
-    }
+  .sanitair {
+    background-image: url(../fotos/sanitairMobile.png);
+    background-size: cover;
+    /* color        : #161f7a; */
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 h1.titel {
-    text-shadow: 2px 2px 4px #000000;
-    color      : white !important;
+  text-shadow: 2px 2px 4px #000000;
+  color: white !important;
 }
 
 .sanitair h1 {
-    font-size    : 50px;
-    font-weight  : 900;
-    text-align   : center;
-    margin-bottom: 0;
-    color        : #fff;
-    text-shadow  : 2px 2px 4px #000000;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
 }
 
-
 section {
-    margin    : 0 auto;
-    max-width : 1600px;
-    text-align: center;
+  margin: 0 auto;
+  max-width: 1600px;
+  text-align: center;
 }
 
 .links {
-    display       : flex;
-    margin-top    : 35px;
-    margin-bottom : 50px;
-    flex-direction: column;
-    margin:  0 auto;
+  display: flex;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .verwarmingsText {
-    font-size    : 20px;
-    font-weight  : 400;
-    line-height  : 1.5;
-    margin-bottom: 50px;
-    max-width    : 1600px;
-    display      : flex;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  max-width: 1600px;
+  display: flex;
 }
 
 .verwarmingsText h2 {
-    font-size  : 30px;
-    line-height: 1.5;
-    text-align : left;
-    max-width  : 800px;
-    margin-top : 25px;
-    color      : #161f7a;
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 800px;
+  margin-top: 25px;
+  color: #161f7a;
 }
 
 .verwarmingsText .text {
-    font-size   : 20px;
-    font-weight : 400;
-    line-height : 1.5;
-    text-align  : left;
-    margin-right: auto;
-    max-width   : 800px;
-    margin-top  : 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin-right: auto;
+  max-width: 800px;
+  margin-top: 25px;
 }
 
 .rechts {
-    margin-top : 35px;
+  margin-top: 35px;
 }
 
 .verwarmingsLogo {
-    width        : 300px;
-    border-radius: 10px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 .underText {
-    font-size : 17px;
-    text-align: center;
-    max-width : 300px;
+  font-size: 17px;
+  text-align: center;
+  max-width: 300px;
 }
 
 .reaButtonPos button {
-    margin-top      : 25px;
-    margin-bottom   : 50px;
-    display         : inline-block;
-    padding         : 10px 15px;
-    font-size       : 18px;
-    font-weight     : bold;
-    text-transform  : uppercase;
-    border          : solid 2px #8bb2e9;
-    border-radius   : 20px;
-    background-color: #8bb2e9;
-    color           : #161f7a;
-    transition      : background-color 0.3s ease;
-    letter-spacing  : 1px;
-    transition      : background-color 0.3s ease, transform 0.2s ease;
-    box-shadow      : rgba(0, 0, 0, 0.25) 0px 5px 15px;
-    cursor          : pointer;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: solid 2px #8bb2e9;
+  border-radius: 20px;
+  background-color: #8bb2e9;
+  color: #161f7a;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  cursor: pointer;
 }
 
 /* media query 1500px display block verwarmingstext */
 @media screen and (max-width: 1500px) {
-    .verwarmingsText {
-        display  : block;
-        max-width: 100%;
-    }
+  .verwarmingsText {
+    display: block;
+    max-width: 100%;
+  }
 
-    .verwarmingsText h2 {
-        text-align  : center;
-        max-width   : 1600px;
-        margin-left : 200px;
-        margin-right: 200px;
+  .verwarmingsText h2 {
+    text-align: center;
+    max-width: 1600px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 
-    }
+  .verwarmingsText .text {
+    text-align: left;
+    max-width: 1400px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 
-    .verwarmingsText .text {
-        text-align  : left;
-        max-width   : 1400px;
-        margin-left : 200px;
-        margin-right: 200px;
-    }
+  .rechts {
+    margin-left: 0;
+  }
 
-    .rechts {
-        margin-left: 0;
-    }
+  .underText {
+    display: none;
+  }
 
-    .underText {
-        display: none;
-
-    }
-
-    .verwarmingsLogo {
-        display: none;
-    }
-
+  .verwarmingsLogo {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  .verwarmingsText h2 {
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 
-    .verwarmingsText h2 {
-        text-align  : left;
-        margin-left : 100px;
-        margin-right: 100px;
-
-    }
-
-    .verwarmingsText .text {
-        text-align  : left;
-        max-width   : 1400px;
-        margin-left : 100px;
-        margin-right: 100px;
-    }
-
+  .verwarmingsText .text {
+    text-align: left;
+    max-width: 1400px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
-
 
 @media screen and (max-width: 600px) {
-    .hero h1 {
-        font-size: 25px !important;
-    }
+  .hero h1 {
+    font-size: 25px !important;
+  }
 
-    .verwarmingsText h2 {
-        text-align  : center;
-        max-width   : 1400px;
-        margin-left : 25px;
-        margin-right: 25px;
+  .verwarmingsText h2 {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 
-    }
-
-    .verwarmingsText .text {
-        text-align  : center;
-        max-width   : 1400px;
-        margin-left : 25px;
-        margin-right: 25px;
-    }
-}
-
-.soort {
-    margin        : 10px;
-    padding       : 0;
-    display       : flex;
-    flex-direction: column;
-
+  .verwarmingsText .text {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 }
 
 .soortenVerwarming {
-    height         : auto;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-evenly;
-    flex-flow      : wrap;
-    margin-left    : 10%;
-    margin-right   : 10%;
-    margin-top     : 1%;
-    margin-bottom  : 50px;
-    left           : 0;
-    right          : 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+.soort {
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.soort:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .soortenVerwarming img {
-    width           : 300px;
-    height          : 230px;
-    background-color: rgb(255, 255, 255);
-    box-sizing      : border-box;
-    font-size       : 50px;
-    transition      : 0.5s;
-    border-radius   : 10px 10px 0 0;
-    padding         : 0;
-    margin          : 0;
-    left            : 0;
-    right           : 0;
+  width: 300px;
+  height: 230px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  font-size: 50px;
+  transition: 0.5s;
+  border-radius: 10px 10px 0 0;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
 }
 
-
 .soortText {
-    font-weight     : 600;
-    font-size       : 20px;
-    margin          : 0;
-    padding         : 10px;
-    background-color: #161f7a;
-    color           : #fff;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  background-color: #161f7a;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
 }
