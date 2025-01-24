@@ -1,97 +1,64 @@
-let slideIndex = 1;
-showSlidesBadkamer(slideIndex);
+let currentCategory = 'verwarming';
+let currentTitle = 'verwarmingTitel';
+let currentIndex = 0;
 
-function plusSlides(n) {
-  showSlidesBadkamer(slideIndex += n);
+// Function to show the selected category
+function showCategory(category, title) {
+    // Hide all galleries
+    const galleries = document.querySelectorAll('.gallery');
+    galleries.forEach(gallery => gallery.classList.add('hidden'));
+
+
+    // Show selected gallery
+    currentCategory = category;
+    document.getElementById(category).classList.remove('hidden');
 }
 
-function huidigeDia(n) {
-  showSlidesBadkamer(slideIndex = n);
+function showTitel(title) {
+    const galleriesTitles = document.querySelectorAll('.galleryTitel');
+    galleriesTitles.forEach(galleryTitle => galleryTitle.classList.add('hidden'));
+
+    currentTitle = title;
+    document.getElementById(title).classList.remove('hidden');
 }
 
-function showSlidesBadkamer(n) {
-  let i;
-  let slides = document.getElementsByClassName("badkamer");
-  let dots = document.getElementsByClassName("bad");
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  // captionText.innerHTML = dots[slideIndex-1].alt;
+// Function to open the lightbox
+function openLightbox(index, category) {
+    currentIndex = index;
+    currentCategory = category;
+
+    const gallery = document.getElementById(category);
+    const images = gallery.querySelectorAll('img');
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    lightboxImg.src = images[index].src;
+    lightbox.classList.remove('hidden');
 }
 
-
-let slideIndexSanitair = 1;
-showSlidesSanitair(slideIndexSanitair);
-
-function plusSlides1(n) {
-  showSlidesSanitair(slideIndexSanitair += n);
+// Function to close the lightbox
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.add('hidden');
 }
 
-function huidigeDia1(n) {
-  showSlidesSanitair(slideIndexSanitair = n);
+// Function to show the next image
+function nextImage() {
+    const gallery = document.getElementById(currentCategory);
+    const images = gallery.querySelectorAll('img');
+    currentIndex = (currentIndex + 1) % images.length;
+
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = images[currentIndex].src;
 }
 
-function showSlidesSanitair(n) {
-  let i;
-  let slides = document.getElementsByClassName("sanitair");
-  let dots = document.getElementsByClassName("san");
-  if (n > slides.length) {
-    slideIndexSanitair = 1
-  }
-  if (n < 1) {
-    slideIndexSanitair = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndexSanitair - 1].style.display = "block";
-  dots[slideIndexSanitair - 1].className += " active";
-  // captionText.innerHTML = dots[slideIndex-1].alt;
+// Function to show the previous image
+function prevImage() {
+    const gallery = document.getElementById(currentCategory);
+    const images = gallery.querySelectorAll('img');
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = images[currentIndex].src;
 }
-
-
-// let slideIndexKoeling = 1;
-// showSlidesKoeling(slideIndexKoeling);
-
-// function plusSlides2(n) {
-//   showSlidesKoeling(slideIndexKoeling += n);
-// }
-
-// function huidigeDia2(n) {
-//   showSlidesKoeling(slideIndexKoeling = n);
-// }
-
-// function showSlidesKoeling(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("koeling");
-//   let dots = document.getElementsByClassName("koel");
-//   if (n > slides.length) {
-//     slideIndexKoeling = 1
-//   }
-//   if (n < 1) {
-//     slideIndexKoeling = slides.length
-//   }
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndexKoeling - 1].style.display = "block";
-//   dots[slideIndexKoeling - 1].className += " active";
-//   // captionText.innerHTML = dots[slideIndex-1].alt;
-// }
