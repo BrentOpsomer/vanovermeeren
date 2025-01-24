@@ -2,14 +2,11 @@ let currentCategory = 'verwarming';
 let currentTitle = 'verwarmingTitel';
 let currentIndex = 0;
 
-// Function to show the selected category
 function showCategory(category, title) {
-    // Hide all galleries
     const galleries = document.querySelectorAll('.gallery');
     galleries.forEach(gallery => gallery.classList.add('hidden'));
 
 
-    // Show selected gallery
     currentCategory = category;
     document.getElementById(category).classList.remove('hidden');
 }
@@ -22,7 +19,6 @@ function showTitel(title) {
     document.getElementById(title).classList.remove('hidden');
 }
 
-// Function to open the lightbox
 function openLightbox(index, category) {
     currentIndex = index;
     currentCategory = category;
@@ -37,13 +33,11 @@ function openLightbox(index, category) {
     lightbox.classList.remove('hidden');
 }
 
-// Function to close the lightbox
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.classList.add('hidden');
 }
 
-// Function to show the next image
 function nextImage() {
     const gallery = document.getElementById(currentCategory);
     const images = gallery.querySelectorAll('img');
@@ -53,7 +47,6 @@ function nextImage() {
     lightboxImg.src = images[currentIndex].src;
 }
 
-// Function to show the previous image
 function prevImage() {
     const gallery = document.getElementById(currentCategory);
     const images = gallery.querySelectorAll('img');
