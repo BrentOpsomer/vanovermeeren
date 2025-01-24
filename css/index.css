@@ -566,12 +566,16 @@ iframe {
     padding: 10px 15px;
   }
 
+  .containerHead {
+    width: 400px;
+  }
+
   .titel {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .woorden {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .scrollButton {
@@ -711,6 +715,10 @@ iframe {
   .reaContainer {
     /* margin-left: 20%;
     margin-right: 20%; */
+  }
+
+  .containerHead {
+    width: 400px;
   }
 
   .reaContainer img {
