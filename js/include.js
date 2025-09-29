@@ -1,33 +1,29 @@
 // Function to generate and insert the navigation menu
 function insertNavigationMenu() {
   const navigationMenu = `
-    <nav>
-      <ul class="menu">
-        <div class="logo" onclick="window.location.href='index';">
-        <p class="naam">VAN OVERMEEREN bv</p>
-        <img src="fotos/logoHeader.png">
-        </div>
-        <li class="item"><a href="index">HOME</a></li>
-        <li class="item has-submenu">
-          <a tabindex="0">DIENSTEN</a>
-          <ul class="submenu">
-            <li class="subitem"><a href="verwarming">VERWARMING</a></li>
-            <li class="subitem"><a href="sanitair">SANITAIR</a></li>
-            <li class="subitem"><a href="ventilatie">VENTILATIE</a></li>
-            <li class="subitem"><a href="airconditioning">AIRCONDITIONING</a></li>
-          </ul>
-        </li>
-        <li class="item"><a href="realisaties">REALISATIES</a></li>
-        <li class="item"><a href="#foot">CONTACT</a></li>
-        <button class="navKnop" aria-controls="navigatie">
-          <svg class="toggle" fill="var(--button-color)" viewBox="0 0 100 100" width="50">
-            <rect class="lijntje boven" width="80" height="10" x="10" y="25" rx="5"></rect>
-            <rect class="lijntje midden" width="80" height="10" x="10" y="45" rx="5"></rect>
-            <rect class="lijntje beneden" width="80" height="10" x="10" y="65" rx="5"></rect>
-          </svg>
-        </button>
-      </ul>
-    </nav>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+  <ul class="menu">
+    <div class="logo" onclick="window.location.href='index';">
+      <p class="naam">VAN OVERMEEREN</p>
+      <img src="fotos/logoHeader.png">
+    </div>
+    <li class="item"><a href="index">HOME</a></li>
+    <li class="item"><a href="verwarming">VERWARMING</a></li>
+    <li class="item"><a href="sanitair">SANITAIR</a></li>
+    <li class="item"><a href="ventilatie">VENTILATIE</a></li>
+    <li class="item"><a href="airconditioning">AIRCONDITIONING</a></li>
+    <li class="item"><a href="realisaties">REALISATIES</a></li>
+    <li class="item"><a href="#foot">CONTACT</a></li>
+    <button class="navKnop" aria-controls="navigatie">
+      <svg class="toggle" fill="var(--button-color)" viewBox="0 0 100 100" width="50">
+        <rect class="lijntje boven" width="80" height="10" x="10" y="25" rx="5"></rect>
+        <rect class="lijntje midden" width="80" height="10" x="10" y="45" rx="5"></rect>
+        <rect class="lijntje beneden" width="80" height="10" x="10" y="65" rx="5"></rect>
+      </svg>
+    </button>
+  </ul>
+</nav>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   `;
 
@@ -43,56 +39,71 @@ function insertNavigationMenu() {
 // Function to generate and insert the footer menu
 function includeFooterMenu() {
   const footerMenu = `
-    <footer class="footer" id="foot">
-      <div class="container">
-        <div class="row">
-          <div class="footerKolom">
-            <h4>Navigatie</h4>
-            <ul>
-              <li><a href="realisaties">Realisaties</a></li>
-              <li><a href="index#specs">Specialiteiten</a></li>
-              <li><a class="onder" href="verwarming">- Verwarming</a></li>
-              <li><a class="onder" href="sanitair">- Sanitair</a></li>
-              <li><a class="onder" href="ventilatie">- Ventilatie</a></li>
-              <li><a class="onder" href="onderhoud">- Onderhoud</a></li>
-            </ul>
-          </div>
-          <div class="footerKolom">
-            <h4>Volg ons</h4>
-            <div class="iconen">
-              <a href="tel:0476/43-47-75"><i class="fa fa-facebook"></i></a>
-            </div>
-          </div>
-          <div class="footerKolom">
-            <div class="iconen">
-              <a href="tel:0476/43-47-75"><i class="fa fa-phone"></i></a>
-            </div>
-            <ul>
-              <li><a class="contact" href="tel:">0476 43 47 75</a></li>
-            </ul>
-            <ul>
-              <div class="iconen">
-                <a href="https://www.google.be/maps/place/Zulzekestraat+44c,+9690+Kluisbergen/@50.7824652,3.5694859,17z/data=!3m1!4b1!4m5!3m4!1s0x47c31a9a5bcc8a89:0x42b9f8f05b3ca2b!8m2!3d50.7824652!4d3.5716746"
-                  target="_blank"><i class="fa fa-map-marker"></i></a>
-              </div>
-              <li><a class="contact"
-                  href="https://www.google.be/maps/place/Zulzekestraat+44c,+9690+Kluisbergen/@50.7824652,3.5694859,17z/data=!3m1!4b1!4m5!3m4!1s0x47c31a9a5bcc8a89:0x42b9f8f05b3ca2b!8m2!3d50.7824652!4d3.5716746"
-                  target="_blank">Zulzekestraat 44c</a></li>
-            </ul>
-            <ul>
-              <div class="iconen">
-                <a href="mailto:"><i class="fa fa-envelope"></i></a>
-              </div>
-              <li><a class="contact" href="mailto:">van.overmeeren@telenet.be</a></li>
-            </ul>
-          </div>
+    <footer class="site-footer" id="foot" role="contentinfo" aria-label="Website footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__grid">
+      <!-- Merk / logo -->
+      <section class="footer-block footer-brand" aria-labelledby="footer-brand-title">
+        <h4 id="footer-brand-title" class="visually-hidden">Van Overmeeren</h4>
+        <img class="footer-logo" src="fotos/logo.png" alt="Van Overmeeren bv">
+        <p class="footer-text">
+          Verwarming • Sanitair • Ventilatie • Airconditioning
+        </p>
+      </section>
+
+      <!-- Navigatie -->
+      <nav class="footer-block footer-nav" aria-labelledby="footer-nav-title">
+        <h4 id="footer-nav-title" class="footer-title">Navigatie</h4>
+        <ul class="footer-links">
+          <li><a href="realisaties">Realisaties</a></li>
+          <li><a href="index#specs">Diensten</a></li>
+          <li><a class="onder" href="verwarming">- Verwarming</a></li>
+          <li><a class="onder" href="sanitair">- Sanitair</a></li>
+          <li><a class="onder" href="ventilatie">- Ventilatie</a></li>
+          <li><a class="onder" href="onderhoud">- Onderhoud</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contact -->
+      <section class="footer-block footer-contact" aria-labelledby="footer-contact-title">
+        <h4 id="footer-contact-title" class="footer-title">Contacteer ons</h4>
+
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="icon-bubble"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+            <a class="contact-link"
+               href="https://www.google.be/maps/place/Zulzekestraat+44c,+9690+Kluisbergen/@50.7824652,3.5694859,17z/"
+               target="_blank" rel="noopener">
+              Zulzekestraat 44c, 9690 Kluisbergen
+            </a>
+          </li>
+          <li class="contact-item">
+            <span class="icon-bubble"><i class="fa fa-phone" aria-hidden="true"></i></span>
+            <a class="contact-link" href="tel:+32476434775">0476 43 47 75</a>
+          </li>
+          <li class="contact-item">
+            <span class="icon-bubble"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <a class="contact-link" href="mailto:van.overmeeren@telenet.be">van.overmeeren@telenet.be</a>
+          </li>
+        </ul>
+
+        <div class="socials" aria-label="Volg ons">
+          <a class="icon-bubble social" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          
         </div>
-      </div>
-    </footer>
-    <div class="copyR">
-    <p class="footerNaam">vanovermeeren bv</p>
-      <li class="copyright"><a>&copy; 2023 - vanovermeeren.be</a></li>
+      </section>
     </div>
+
+    <div class="site-footer__bottom">
+      <p class="footer-bottom__left">© 2025 vanovermeeren bv</p>
+      <p class="footer-bottom__right"><a href="/privacy">Privacy</a></p>
+    </div>
+  </div>
+</footer>
+
+
   `;
 
   const footerElement = document.getElementById('footer-placeholder');

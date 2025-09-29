@@ -1,155 +1,228 @@
-html {
-    scroll-behavior: smooth;
-	font-family     : 'Open Sans', sans-serif;
+/* ===== Footer (één uniforme achtergrond, icon-bubbles + tekst ernaast) ===== */
+.site-footer {
+  --bg: #161f7a; /* uniforme achtergrond */
+  --text: #edf2ff;
+  --muted: #cbd3ff;
+  --line: rgba(255, 255, 255, 0.15);
+  --bubble-bg: rgba(255, 255, 255, 0.2);
+  --bubble-bg-hover: rgba(255, 255, 255, 0.3);
+
+  background: var(--bg);
+  color: var(--text);
+  width: 100%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-.footer{
-	background-color: #161f7a;
-    padding: 70px 0;
-	position:absolute;
-	bottom:0;
-	width: 100%;
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease, opacity 0.2s ease;
+}
+.site-footer a:hover {
+  color: #fff;
 }
 
-@media only screen and (max-width: 6000px) {
-	.footer{
-		position:relative;
-	}
-}
-.container{
-	max-width: 1170px;
-	margin:auto;
-	justify-content: center;
-	text-align: center;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-ul{
-	list-style: none;
+.site-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 16px 28px;
 }
 
-.onder {
-	font-size: 13px !important;
+/* Grid: 1 kolom mobiel (centraal), 3 kolommen desktop */
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+  text-align: center; /* MOBILE: navigatie gecentreerd */
+}
+@media (min-width: 820px) {
+  .site-footer__grid {
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    text-align: left;
+  }
 }
 
-.footerKolom{
-   width: 25%;
-   padding: 0 15px;
-   text-align: center;
+/* Logo & intro */
+.footer-logo {
+  width: 170px;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 8px;
 }
-.footerKolom h4{
-	font-size: 18px;
-	color: #ffffff;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-.footerKolom h4::before{
-	content: '';
-	position: absolute;
-	bottom: -10px;
-	background-color: white;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
-.footerKolom ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footerKolom ul li a{
-	font-size: 16px;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 600;
-	color: #bbbbbb;
-	display: block;
-	padding: 10px;
-	transition: all 0.3s ease;
-}
-.footerKolom ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.footerKolom .iconen a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
+.footer-text {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-a {
-	font-weight: 300;
+/* Titels */
+.footer-title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+.footer-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin: 8px auto 0; /* MOBILE: lijn midden */
+  background: var(--line);
+}
+@media (min-width: 820px) {
+  .footer-title::after {
+    margin-left: 0;
+  } /* DESKTOP: lijn links */
 }
 
-.footerKolom .iconen a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+/* Navigatie-links (moeten op mobile gecentreerd) */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  text-align: center; /* MOBILE: centreren */
+}
+.footer-links li {
+  margin: 6px 0;
+}
+.footer-links a {
+  font-weight: 600;
+  display: inline-block;
+}
+.footer-links a:hover {
+  padding-left: 4px;
+}
+.footer-links a.onder {
+  font-size: 13px;
 }
 
-/*responsive*/
-@media(max-width: 767px){
-  .footerKolom{
-    width: 50%;
-    margin-bottom: 30px;
-    text-align: center;
-}
-}
-@media(max-width: 574px){
-  .footerKolom{
-    width: 100%;
-    text-align: center;
-}
+@media (min-width: 820px) {
+  .footer-links {
+    text-align: left;
+  } /* DESKTOP: links */
 }
 
-.footerLogo{
-	width: 180px;
-	margin-top: 0.5%;
-	border-radius: 5px;
+/* Contactlijst: icon-bubble + tekst */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
 }
 
-.footerUitleg {
-	color: white;
-}
-.copyR {
-	display: flex;
-	background-color: #161f7a;
-	padding: 30px;
-	text-align: center;
-	align-items: center;
-	justify-content: center;text-decoration: none;
+/* Contactrij */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* kort bij elkaar “plakken” */
+  margin: 10px 0;
+  justify-content: flex-start; /* altijd links */
 }
 
-@media only screen and (max-width: 600px) {
-	.copyR {
-		display: block;
-	}
-
+/* >>> MOBILE SPECIFIEK: links + extra linker marge voor de rij en iconen <<< */
+@media (max-width: 819px) {
+  .footer-contact .contact-list {
+    text-align: left;
+  }
+  .footer-contact .contact-item {
+    margin-left: 12px;
+  } /* gewenste left margin */
+  .footer-contact .icon-bubble {
+    margin-left: 4px;
+  } /* kleine extra left marge op icoon */
 }
 
-.copyright {
-	text-align: center;
-	padding: 20px;
+/* Icon-bollen */
+.icon-bubble {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bubble-bg);
+  color: #fff;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
-.copyR img {
-	width: 300px;
+.icon-bubble i {
+  font-size: 18px;
+  line-height: 1;
 }
-.copyright a {
-	color: #ffffff;
-	text-decoration: none;
+.icon-bubble:hover {
+  background: var(--bubble-bg-hover);
+  transform: translateY(-2px);
 }
 
-.footerNaam {
-	color: #ffffff;
-	text-decoration: none;
+/* Tekst naast de bol */
+.contact-link {
+  color: var(--muted);
+  line-height: 1.4;
+  word-break: break-word;
+}
+.contact-link:hover {
+  color: #fff;
+}
+
+/* Socials (bollen, zonder tekst) */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  justify-content: center; /* MOBILE: centraal */
+}
+@media (min-width: 820px) {
+  .socials {
+    justify-content: flex-start;
+  } /* DESKTOP: links */
+}
+.icon-bubble.social {
+  text-decoration: none;
+}
+
+/* Onderbalk */
+.site-footer__bottom {
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0 4px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.footer-bottom__left,
+.footer-bottom__right {
+  margin: 0;
+}
+.footer-bottom__right a {
+  font-weight: 600;
+}
+
+/* Visually hidden helper */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+/* Zeer smal scherm */
+@media (max-width: 360px) {
+  .icon-bubble {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+  .footer-logo {
+    width: 150px;
+  }
 }

@@ -66,7 +66,6 @@ button#scrollToTopBtn:hover {
   transition: background-color 0.3s ease;
   letter-spacing: 1px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  /* Add transition for transform property */
 }
 
 .containerHead button:hover {
@@ -74,9 +73,7 @@ button#scrollToTopBtn:hover {
   background-color: #8bb2e9;
   color: #161f7a;
   transform: translateY(-5px);
-  /* Add a slight upward translation */
   transition: background-color 0.3s ease, transform 0.2s ease;
-  /* Add transition for transform property */
 }
 
 .index {
@@ -141,18 +138,6 @@ main {
 
 .meer {
   display: none;
-  /* cursor       : pointer;
-    position        : absolute;
-    top             : 12%;
-    margin-right    : auto;
-    margin-left     : 72.5%;
-    padding         : 16px;
-    margin-top      : -50px;
-    color           : #161f7a;
-    font-weight     : bold;
-    font-size       : 30px;
-    border-radius   : 3px 0 0 3px;
-    z-index         : 10; */
 }
 
 .wie {
@@ -164,33 +149,9 @@ main {
 
 .textRight {
   position: relative;
-  /* margin-right: 100px; */
 }
 
-.imageLeft {
-  /* margin-right  : -150px; */
-  left: 0;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
-  border-radius: 15px;
-  padding-bottom: 3%;
-  padding-top: 3%;
-}
-
-.meerResBtn {
-  display: none;
-  cursor: pointer;
-  padding: 11px;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 30px;
-  border-radius: 10px;
-  background-color: #161f7a;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
-  border-radius: 15px;
-  margin-bottom: 3%;
-  margin-top: 3%;
-}
-
+/* ---------- Over ons: betere responsiveness ---------- */
 .overOns {
   background-color: #f5f5f5;
   text-align: center;
@@ -199,17 +160,40 @@ main {
 }
 
 .overOnsFlex {
-  display: inline-block;
-  /* flex-direction : row; */
+  display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top     : 25px; */
+  gap: 40px;
   width: 75%;
-  /* margin-left    : 7.5%; */
-  height: 500px;
+  height: auto;
+  margin: 0 auto;
   box-sizing: border-box;
   font-size: 50px;
   transition: 0.5s;
+}
+
+.imageLeft {
+  flex: 1 1 0;
+  max-width: 800px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  border-radius: 15px;
+  padding: 3% 3%;
+  background: #fff;
+}
+
+.textRight {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overOnsFlex .meerPic {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
 }
 
 .text1,
@@ -218,33 +202,24 @@ main {
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
 }
-
-.overOnsFlex .meerPic {
-  width: 80%;
-  margin: 0 auto;
-  /* margin-left  : 235px; */
-  border-radius: 10px;
-  position: relative;
-  cursor: pointer;
-}
+/* ---------------------------------------------------- */
 
 .lijn {
   width: 75%;
   padding-bottom: 25px;
-  margin: 25px;
+  margin: 50px auto; /* boven/onder = 25px, links/rechts = auto */
   border-bottom: 2px solid #161f7a;
-  margin: 0 auto;
 }
 
 .lijn2 {
   width: 75%;
   padding-bottom: 25px;
-  margin: 50px;
+  margin: 0 auto 50px auto; /* centreren + margin-bottom */
   border-bottom: 2px solid #161f7a;
-  margin: 0 auto;
 }
 
 .index h1 {
@@ -272,116 +247,49 @@ main {
   top: -10;
 }
 
+/* ---------- BOXES: 4×1 → 2×2 → 1×1, vaste afmetingen ---------- */
 .box {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-flow: wrap;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 300px); /* 4 op een rij */
+  grid-auto-rows: 380px; /* vaste hoogte */
+  gap: 40px;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1%;
+  height: auto;
 }
 
-.vanLinks {
+@media screen and (max-width: 1200px) {
+  .box {
+    grid-template-columns: repeat(2, 300px);
+  } /* 2×2 */
+}
+
+@media screen and (max-width: 640px) {
+  .box {
+    grid-template-columns: repeat(1, 300px);
+  } /* 1×1 */
+}
+
+.vanLinks,
+.vanRechts,
+.vanBeneden,
+.boxes {
   width: 300px;
   height: 380px;
-  margin: 20px;
+  margin: 0;
   box-sizing: border-box;
-  font-size: 50px;
   transition: 0.5s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5px;
-  margin-bottom: 8%;
   cursor: pointer;
-  transition: all 1s ease;
-  opacity: 0;
-  /* transform    : translateX(-100%); */
   background-color: #fff;
+  overflow: hidden;
+  position: relative;
 }
 
-.vanRechts {
-  width: 300px;
-  height: 380px;
-  margin: 20px;
-  box-sizing: border-box;
-  font-size: 50px;
-  transition: 0.5s;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5px;
-  margin-bottom: 8%;
-  cursor: pointer;
-  transition: all 1s ease;
-  opacity: 0;
-  /* transform    : translateX(100%); */
-  background-color: #fff;
-}
-
-.vanBeneden {
-  width: 300px;
-  height: 400px;
-  margin: 20px;
-  box-sizing: border-box;
-  font-size: 50px;
-  transition: 0.5s;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5px;
-  margin-bottom: 8%;
-  cursor: pointer;
-}
-
-.toonBeneden {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.toonLinks {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.toonRechts {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.toon-up {
-  display: block !important;
-}
-
-.boxes:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
-}
-
-.prodtext {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  color: rgb(62, 62, 62);
-  font-weight: bold;
-  font-size: 32px;
-  /* font-family     : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-  color: #fff;
-  background-color: #161f7a;
-  padding: 2%;
-  margin-top: 5%;
-  font-size: 25px;
-}
-
-.beschrijving {
-  margin-top: 5%;
-  font-size: 17px;
-  width: 90%;
-  text-align: center;
-  padding: 6%;
-  border-radius: 20px;
-  margin-left: 5%;
-}
-
+/* Icon bovenaan, blijft zichtbaar */
 .icoon {
   font-size: 70px;
   display: flex;
@@ -390,6 +298,43 @@ main {
   border-radius: 20px;
 }
 
+/* Titel-balk blijft zichtbaar */
+.prodtext {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  color: #fff;
+  background-color: #161f7a;
+  padding: 2%;
+  margin-top: 5%;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* FOTO in plaats van beschrijvingstekst */
+.tile-photo {
+  width: 100%;
+  height: 58%;
+  object-fit: cover;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: block;
+  margin: 0px auto 0;
+  transition: transform 0.5s ease;
+}
+
+.boxes:hover {
+  transform: scale(1.05);
+}
+
+/* Verberg oude beschrijvingstekst indien nog aanwezig */
+.beschrijving {
+  display: none;
+}
+/* -------------------------------------------------------------- */
+
 strong {
   color: #161f7a;
 }
@@ -397,12 +342,12 @@ strong {
 .specTitle {
   text-align: center;
   font-size: 30px;
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 
 .sectionOne {
   padding-top: 50px;
   position: relative;
+  margin-bottom: 150px;
 }
 
 .logo-on-image {
@@ -459,21 +404,15 @@ textarea {
   background-color: #8bb2e9;
   color: #161f7a;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  /* Add transition for transform property */
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-  /* Increase the box shadow */
   letter-spacing: 1px;
 }
 
 .reaKnop:hover {
   cursor: pointer;
-
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-  /* Increase the box shadow */
   transform: translateY(-5px);
-  /* Add a slight upward translation */
   transition: background-color 0.3s ease, transform 0.2s ease;
-  /* Add transition for transform property */
 }
 
 .reaContainer {
@@ -512,19 +451,6 @@ iframe {
   border-radius: 5px;
 }
 
-/* .naar-boven {
-    position        : fixed;
-    top             : 81%;
-    right           : 50px;
-    background-color: #161f7a;
-    width           : 50px;
-    height          : 50px;
-    opacity         : 1;
-    cursor          : pointer;
-    display         : none;
-    border-radius   : 10px 0 0 10px;
-} */
-
 .fa-chevron-up {
   color: white;
   font-size: 30px;
@@ -532,6 +458,7 @@ iframe {
   margin-left: 10px;
 }
 
+/* Extra grote schermen */
 @media screen and (min-width: 2000px) {
   .logo-on-image {
     width: 600px;
@@ -539,12 +466,12 @@ iframe {
   }
 
   .containerHead button {
-    /* padding: 10px 15px; */
     padding: 15px 25px;
     font-size: 25px;
   }
 }
 
+/* Mobiel & kleinere schermen */
 @media screen and (max-width: 600px) {
   .index h1 {
     font-size: 30px;
@@ -552,10 +479,6 @@ iframe {
 
   .index p {
     font-size: 15px;
-  }
-
-  .overOnsFlex {
-    flex-direction: column;
   }
 
   .logo-on-image {
@@ -587,15 +510,6 @@ iframe {
   }
 }
 
-/* @media screen and (max-width: 1500px) {
-    .imageLeft {
-        margin-top     : 125px;
-        width          : 90%;
-        justify-content: center;
-        align-items    : center;
-    }
-} */
-
 @media screen and (max-width: 1200px) {
   .logo-on-image {
     margin-top: 0;
@@ -615,31 +529,24 @@ iframe {
     align-items: center;
     justify-content: center;
     margin-top: -250px;
-    /* Pas de waarde aan naar jouw voorkeur */
   }
 }
 
-/* @media screen and (max-width: 1000px) {
-    .imageLeft {
-        margin-top     : 325px;
-        width          : 90%;
-        justify-content: center;
-        align-items    : center;
-    }
-} */
-
-/* @media screen and (max-width: 900px) {
-    .imageLeft {
-        margin-top: 325px;
-    }
-} */
+/* Over ons stapelt onder elkaar op small screens */
+@media screen and (max-width: 900px) {
+  .overOnsFlex {
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+  }
+  .imageLeft,
+  .textRight {
+    width: 100%;
+    max-width: 900px;
+  }
+}
 
 @media screen and (max-width: 800px) {
-  .overOnsFlex {
-    margin-top: -100px;
-    padding-bottom: 100px;
-  }
-
   .sectionOne {
     padding-top: 50px;
     position: relative;
@@ -653,13 +560,6 @@ iframe {
 }
 
 @media screen and (max-width: 600px) {
-  .imageLeft {
-    margin-top: 200px;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-  }
-
   .text1,
   .text2 {
     margin-left: 20px;
@@ -685,13 +585,6 @@ iframe {
 }
 
 @media screen and (max-width: 420px) {
-  .imageLeft {
-    margin-top: 150px;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-  }
-
   .containerHead button {
     padding: 10px 15px;
     font-size: 15px;
@@ -703,20 +596,12 @@ iframe {
 }
 
 @media screen and (max-width: 330px) {
-  .imageLeft {
-    margin-top: 200px;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
+  .box {
+    grid-template-columns: repeat(1, 300px);
   }
 }
 
 @media screen and (max-width: 500px) {
-  .reaContainer {
-    /* margin-left: 20%;
-    margin-right: 20%; */
-  }
-
   .containerHead {
     width: 400px;
   }

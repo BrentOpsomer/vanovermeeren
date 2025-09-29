@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
-  box-sizing : border-box;
-  padding    : 0;
-  margin     : 0;
-  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
   font-size: 16px;
 }
 
-nav {
+.nav {
   background: linear-gradient(to right, #161f7a, #1321b9);
-  padding   : 0 15px;
+  padding: 0 15px;
 }
 
 a {
-  color          : #fff;
+  color: #fff;
   text-decoration: none;
 }
 
 .menu,
 .submenu {
   list-style-type: none;
-  margin-right   : 1%;
-  margin-left    : 1%;
+  margin-right: 1%;
+  margin-left: 1%;
 }
 
 .logo {
@@ -34,15 +34,15 @@ a {
 }
 
 .logo img {
-  width        : 120px;
+  width: 120px;
   border-radius: 20px;
   margin-left: 2%;
 }
 
 .naam {
-  font-size  : 20px;
+  font-size: 20px;
   font-weight: 900;
-  color      : #fff;
+  color: #fff;
   margin-left: 10px;
 }
 
@@ -56,7 +56,7 @@ a {
 
 .item a {
   border-bottom: 2px solid transparent;
-  transition   : border-bottom-color 0.3s ease;
+  transition: border-bottom-color 0.3s ease;
 }
 
 .item a:hover {
@@ -66,17 +66,17 @@ a {
 /* Mobile menu */
 
 .menu {
-  display        : flex;
-  flex-wrap      : wrap;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items    : center;
+  align-items: center;
 }
 
 .menu li a {
-  display  : block;
-  padding  : 34px 15px 32px;
+  display: block;
+  padding: 34px 15px 32px;
   font-size: 20px;
-  cursor   : pointer;
+  cursor: pointer;
 }
 
 .menu li.subitem a {
@@ -92,10 +92,10 @@ a.toggle {
 }
 
 .item {
-  order        : 3;
-  width        : 100%;
-  text-align   : center;
-  display      : none;
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
   border-bottom: 2px solid transparent;
 }
 
@@ -110,27 +110,27 @@ a.toggle {
 }
 
 .submenu-active .submenu {
-  display         : block;
+  display: block;
   background-color: #090e45;
-  margin-top      : 43px;
+  margin-top: 43px;
 }
 
 .has-submenu i {
   font-size: 12px;
 }
 
-.has-submenu>a::after {
-  content     : "\f078";
-  font-family : "Font Awesome 5 Free";
-  font-size   : 12px;
-  line-height : 16px;
-  font-weight : 900;
-  color       : #fff;
+.has-submenu > a::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  color: #fff;
   padding-left: 5px;
 }
 
 .subitem a {
-  padding         : 50px 15px;
+  padding: 50px 15px;
   background-color: #161f7a;
 }
 
@@ -140,7 +140,7 @@ a.toggle {
 
 .submenu-active {
   background-color: #070b3d;
-  border-radius   : 3px;
+  border-radius: 3px;
 }
 
 .menu {
@@ -152,34 +152,33 @@ a.toggle {
 }
 
 .item.button {
-  width  : auto;
-  order  : 1;
+  width: auto;
+  order: 1;
   display: block;
 }
 
 /* Tablet menu */
 
-@media all and (min-width: 700px) {}
+@media all and (min-width: 700px) {
+}
 
 /* Desktop menu */
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1480px) {
   .menu {
-    flex-wrap : nowrap;
+    flex-wrap: nowrap;
     background: none;
   }
-
-
 
   .logo {
     order: 0;
   }
 
   .item {
-    order   : 1;
+    order: 1;
     position: relative;
-    display : block;
-    width   : auto;
+    display: block;
+    width: auto;
   }
 
   .button {
@@ -191,10 +190,10 @@ a.toggle {
   }
 
   .submenu-active .submenu {
-    display   : block;
-    position  : absolute;
-    left      : 0;
-    top       : 68px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
     background: #111;
     transition: 1s;
   }
@@ -206,20 +205,20 @@ a.toggle {
 
 button {
   background: transparent;
-  border    : none;
+  border: none;
 }
 
 /* Button animation */
 
 .navKnop {
   --button-color: #fff;
-  cursor        : pointer;
+  cursor: pointer;
 }
 
 @media all and (max-width: 500px) {
   .logo {
-    width        : 120px;
-    margin-top   : 2%;
+    width: 120px;
+    margin-top: 2%;
     border-radius: 20px;
     margin-bottom: 1%;
   }
@@ -232,8 +231,8 @@ button {
 /* media query max 1000 */
 @media all and (max-width: 1000px) {
   .logo img {
-    width        : 130px;
-    margin-top   : 1.5%;
+    width: 130px;
+    margin-top: 1.5%;
     border-radius: 20px;
     margin-bottom: 1%;
   }
