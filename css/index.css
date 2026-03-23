@@ -65,7 +65,9 @@ button#scrollToTopBtn:hover {
   color: #161f7a;
   transition: background-color 0.3s ease;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .containerHead button:hover {
@@ -73,7 +75,9 @@ button#scrollToTopBtn:hover {
   background-color: #8bb2e9;
   color: #161f7a;
   transform: translateY(-5px);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .index {
@@ -403,7 +407,9 @@ textarea {
   border-radius: 20px;
   background-color: #8bb2e9;
   color: #161f7a;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
 }
@@ -412,7 +418,9 @@ textarea {
   cursor: pointer;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .reaContainer {
@@ -619,5 +627,148 @@ iframe {
     width: 80%;
     margin-left: 10.5%;
     height: 450px;
+  }
+}
+
+.partnersSection {
+  width: 75%;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.partnersSection h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.partnersSlider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 40px;
+}
+
+.partnersTrack {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  animation: scrollPartners 25s linear infinite;
+  will-change: transform;
+}
+
+.partnersSlider:hover .partnersTrack {
+  animation-play-state: paused;
+}
+
+.partnerLogo {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 120px;
+  background: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.partnerLogo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.partnerLogo img {
+  display: block;
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.partnerLogo:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.partnerLogo img.panasonicLogo {
+  height: 50px;
+}
+
+.partnerLogo img.buderusLogo {
+  height: 75px;
+}
+
+.partnerLogo img.begetubeLogo {
+  height: 65px;
+}
+
+.partnerLogo img.villeroyBochLogo {
+  height: 90px;
+}
+
+.partnerLogo img.hansgroheLogo {
+  height: 100px;
+}
+
+.partnerLogo img.viegaLogo {
+  height: 80px;
+}
+
+/* animatie */
+@keyframes scrollPartners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .partnersSection {
+    width: 90%;
+    padding: 60px 0;
+  }
+
+  .partnersSection h2 {
+    font-size: 1.6rem;
+  }
+
+  .partnersSlider {
+    margin-top: 30px;
+  }
+
+  .partnersTrack {
+    gap: 20px;
+    animation-duration: 20s;
+  }
+
+  .partnerLogo {
+    width: 170px;
+    height: 100px;
+    padding: 15px;
+  }
+
+  .partnerLogo img {
+    height: 45px; /* basis kleiner op mobiel */
+  }
+
+  .partnerLogo img.villeroyBochLogo,
+  .partnerLogo img.hansgroheLogo {
+    height: 50px;
   }
 }

@@ -1,309 +1,436 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 html {
-    scroll-behavior: smooth;
-    font-family    : 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 .verwarming {
-    background-image   : url(../fotos/gas.png);
-    background-repeat  : no-repeat;
-    background-position: center;
-    width              : 100%;
-    /* color           : #161f7a; */
-    padding-top        : 200px;
-    padding-bottom     : 200px;
-    background-size    : cover;
-
-
+  background-image: url(../fotos/gas.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-size: cover;
 }
 
 .verwarming h1 {
-    font-size    : 50px;
-    font-weight  : 900;
-    text-align   : center;
-    margin-bottom: 0;
-    color        : #fff;
-    text-shadow  : 2px 2px 4px #000000;
-
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
 }
-
-.buderus {
-    display: flex;
-
-}
-
-.logoPos img {
-    margin-left: 160px;
-    width      : 80%;
-    position   : relative;
-}
-
 
 section {
-    margin    : 0 auto;
-    max-width : 1600px;
-    text-align: center;
+  margin: 0 auto;
+  max-width: 1600px;
+  text-align: center;
 }
 
 .links {
-    margin-top: 35px;
+  margin-top: 35px;
 }
 
 .verwarmingsText {
-    font-size    : 20px;
-    font-weight  : 400;
-    line-height  : 1.5;
-    margin-bottom: 50px;
-    max-width    : 1600px;
-    display      : flex;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  max-width: 1600px;
+  display: flex;
 }
 
 .verwarmingsText h2 {
-    font-size    : 30px;
-    line-height  : 1.5;
-    text-align   : left;
-    max-width    : 800px;
-    margin-top   : 25px;
-    margin-bottom: 25px;
-    margin-left  : 180px;
-    color        : #161f7a;
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 1100px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 180px;
+  margin-right: 180px;
+  color: #161f7a;
+}
+
+.buderus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.logoPos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  margin: 10px auto 0;
+}
+
+.logoRow img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+.brandLogo {
+  display: block;
+  object-fit: contain;
+}
+
+.buderusBrand {
+  max-height: 70px;
+}
+
+.panasonicBrand {
+  max-height: 45px;
 }
 
 .buderusTextDiv {
-    display       : flex;
-    flex-direction: column;
-    align-items   : center;
-    position      : relative;
-    margin-top    : 25px;
-    margin-right  : 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 25px;
+  margin-right: 100px;
 }
 
 .buderusTextDiv button {
-    margin-top      : 25px;
-    display         : inline-block;
-    padding         : 10px 15px;
-    font-size       : 18px;
-    font-weight     : bold;
-    text-transform  : uppercase;
-    border          : solid 2px #8bb2e9;
-    border-radius   : 20px;
-    background-color: #8bb2e9;
-    color           : #161f7a;
-    transition      : background-color 0.3s ease;
-    letter-spacing  : 1px;
-    transition      : background-color 0.3s ease, transform 0.2s ease;
-    /* Add transition for transform property */
-    box-shadow      : rgba(0, 0, 0, 0.25) 0px 5px 15px;
-    cursor          : pointer;
+  margin-top: 25px;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: solid 2px #8bb2e9;
+  border-radius: 20px;
+  background-color: #8bb2e9;
+  color: #161f7a;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  letter-spacing: 1px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  cursor: pointer;
 }
 
 .buderusTextDiv button:hover {
-    cursor          : pointer;
-    background-color: #8bb2e9;
-    color           : #161f7a;
-    transform       : translateY(-5px);
-    /* Add a slight upward translation */
-    transition      : background-color 0.3s ease, transform 0.2s ease;
-    /* Add transition for transform property */
+  cursor: pointer;
+  background-color: #8bb2e9;
+  color: #161f7a;
+  transform: translateY(-5px);
 }
 
 .verwarmingsText .text {
-    font-size   : 20px;
-    font-weight : 400;
-    line-height : 1.5;
-    text-align  : center;
-    margin-left : 50px;
-    margin-right: 50px;
-    max-width   : 800px;
-    margin-top  : 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 800px;
+  margin-top: 25px;
 }
 
 .rechts {
-    margin-right: 160px;
-    margin-top  : 35px;
+  margin-right: 160px;
+  margin-top: 35px;
 }
 
 .verwarmingsLogo {
-    width        : 300px;
-    border-radius: 10px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 .underText {
-    font-size : 17px;
-    text-align: center;
-    max-width : 300px;
-}
-
-@media screen and (max-width: 1500px) {
-
-    .logoPos {
-        position: relative;
-        width   : 50%;
-        height  : auto;
-        margin  : auto;
-    }
-
-
-    .buderus {
-        display: block;
-        width  : 100%;
-    }
-
-    .logoPos img {
-        width   : 100%;
-        height  : 100%;
-        position: relative;
-        margin  : auto;
-    }
-
-    .buderusTextDiv {
-        display    : block;
-        width      : 100%;
-        margin-left: 0;
-    }
-
-    /* 
-    .buderusTextDiv {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        margin-left: 150px;
-        margin-top: 25px;
-    }
-     */
-
-    .verwarmingsText {
-        display       : block;
-        flex-direction: column;
-        align-items   : center;
-    }
-
-    .verwarmingsText h2 {
-        max-width   : 1400px;
-        margin-left : 300px;
-        margin-right: 300px;
-        position    : relative;
-
-    }
-
-    .verwarmingsText .text {
-        text-align  : center;
-        margin      : 0 auto;
-        max-width   : 1400px;
-        margin-left : 300px;
-        margin-right: 300px;
-    }
-
-
-
-    .rechts {
-        display: none;
-    }
-
-    .underText {
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-
-    .verwarmingsText h2 {
-        text-align   : center;
-        max-width    : 1400px;
-        margin-left  : 100px;
-        margin-right : 100px;
-        margin-bottom: 50px;
-        margin-top   : 50px;
-    }
-
-    .verwarmingsText .text {
-        text-align  : center;
-        max-width   : 1400px;
-        margin-left : 0px;
-        margin-right: 0px;
-    }
-
-
-}
-
-@media screen and (max-width: 700px) {
-    .logoPos img {}
-}
-
-
-@media screen and (max-width: 600px) {
-    .hero h1 {
-        font-size: 25px !important;
-    }
-
-    .verwarmingsText h2 {
-        text-align  : center;
-        max-width   : 1400px;
-        margin-left : 20px;
-        margin-right: 20px;
-
-    }
-
-    .verwarmingsText .text {
-        text-align  : center;
-        max-width   : 1400px;
-        margin-left : 25px;
-        margin-right: 25px;
-    }
+  font-size: 17px;
+  text-align: center;
+  max-width: 300px;
 }
 
 .soortenVerwarming {
-    height         : auto;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-evenly;
-    flex-flow      : wrap;
-    margin-left    : 10%;
-    margin-right   : 10%;
-    margin-top     : 1%;
-    margin-bottom  : 50px;
-    left           : 0;
-    right          : 0;
-
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 50px;
+  left: 0;
+  right: 0;
 }
 
 .soort {
-    margin        : 10px;
-    padding       : 0;
-    display       : flex;
-    flex-direction: column;
-    transition    : transform 0.3s ease-in-out;
-    /* Zorg voor een vloeiende overgang van 0.3 seconden */
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
 }
 
 .soort:hover {
-    cursor   : pointer;
-    transform: scale(1.1);
-
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .soortenVerwarming img {
-    width           : 300px;
-    height          : 230px;
-    background-color: rgb(255, 255, 255);
-    box-sizing      : border-box;
-    font-size       : 50px;
-    transition      : 0.5s;
-    border-radius   : 10px 10px 0 0;
-    padding         : 0;
-    margin          : 0;
-    left            : 0;
-    right           : 0;
+  width: 300px;
+  height: 230px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  font-size: 50px;
+  transition: 0.5s;
+  border-radius: 10px 10px 0 0;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
 }
 
 .soortText {
-    font-weight     : 600;
-    font-size       : 20px;
-    margin          : 0;
-    padding         : 10px;
-    background-color: #161f7a;
-    color           : #fff;
-    border-radius   : 0 0 10px 10px;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  background-color: #161f7a;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.verwarmingRealisaties {
+  margin: 30px 10% 70px;
+}
+
+.verwarmingRealisatiesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.verwarmingRealisatie {
+  width: 100%;
+  aspect-ratio: 1 / 0.68;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 15px;
+  background: #fff;
+}
+
+.verwarmingRealisatie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.verwarmingRealisatiesCta {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.verwarmingRealisatiesCta p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #161f7a;
+  margin: 0 0 18px 0;
+}
+
+.verwarmingRealisatiesCta button {
+  margin-top: 0;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: solid 2px #8bb2e9;
+  border-radius: 20px;
+  background-color: #8bb2e9;
+  color: #161f7a;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  letter-spacing: 1px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.verwarmingRealisatiesCta button:hover {
+  cursor: pointer;
+  background-color: #8bb2e9;
+  color: #161f7a;
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1500px) {
+  .buderus {
+    display: block;
+    width: 100%;
+  }
+
+  .logoPos {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .logoRow {
+    gap: 28px;
+  }
+
+  .buderusBrand {
+    max-height: 55px;
+  }
+
+  .panasonicBrand {
+    max-height: 36px;
+  }
+
+  .buderusTextDiv {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .verwarmingsText {
+    display: block;
+  }
+
+  .verwarmingsText h2 {
+    max-width: 1400px;
+    margin-left: 120px;
+    margin-right: 120px;
+    position: relative;
+  }
+
+  .verwarmingsText .text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .rechts {
+    display: none;
+  }
+
+  .underText {
+    max-width: 100%;
+  }
+
+  .verwarmingRealisatiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .verwarmingsText h2 {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+
+  .verwarmingsText .text {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .logoRow {
+    gap: 25px;
+  }
+
+  .buderusBrand {
+    max-height: 48px;
+  }
+
+  .panasonicBrand {
+    max-height: 32px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .verwarmingRealisatiesGrid {
+    gap: 14px;
+  }
+
+  .verwarmingRealisatie {
+    aspect-ratio: 1 / 0.72;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .verwarming h1 {
+    font-size: 25px !important;
+  }
+
+  .verwarmingsText h2 {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .verwarmingsText .text {
+    text-align: center;
+    max-width: 1400px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .logoRow {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .buderusBrand {
+    max-height: 40px;
+  }
+
+  .panasonicBrand {
+    max-height: 28px;
+  }
+
+  .verwarmingRealisaties {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .verwarmingRealisatiesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .verwarmingRealisatie {
+    max-width: 420px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 0.7;
+  }
+
+  .verwarmingRealisatiesCta p {
+    font-size: 21px;
+  }
 }

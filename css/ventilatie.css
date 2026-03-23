@@ -8,7 +8,6 @@ html {
 .hero {
   background-image: url(../fotos/onderhoud.png);
   background-size: cover;
-  /* color        : #161f7a; */
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -158,7 +157,9 @@ section {
   color: #161f7a;
   transition: background-color 0.3s ease;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
   cursor: pointer;
 }
@@ -168,31 +169,87 @@ section {
   background-color: #2980b9;
 }
 
-
 .ventilatieSchetsen {
   display: flex;
-  justify-content: center; /* Zorgt ervoor dat de items gecentreerd zijn */
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Zorgt ervoor dat de items op een nieuwe regel springen op kleinere schermen */
-  gap: 20px; /* Ruimte tussen de div's */
-  margin: 20px; /* Buitenruimte rondom de container */
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
 }
 
 .ventilatieSchetsen .systemc {
-  flex: 1 1 calc(50% - 40px); /* Specifieke breedte voor de systemc div */
-  max-width: 400px; /* Beperk de maximale breedte */
- 
+  flex: 1 1 calc(50% - 40px);
+  max-width: 400px;
 }
 
 .ventilatieSchetsen .systemd {
-  flex: 1 1 calc(50% - 40px); /* Specifieke breedte voor de systemd div */
-  max-width: 395px; /* Beperk de maximale breedte */
- 
+  flex: 1 1 calc(50% - 40px);
+  max-width: 395px;
 }
 
 .ventilatieSchetsen img {
-  width: 100%; /* Afbeelding schaalt volledig met de container mee */
-  height: auto; /* Behoud de verhoudingen van de afbeelding */
-  border-radius: 8px; Optionele afronding van hoeken */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ventilatieRealisaties {
+  margin: 40px 10% 10px;
+}
+
+.ventilatieRealisatiesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ventilatieRealisatie {
+  width: 100%;
+  aspect-ratio: 1 / 0.72;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 15px;
+  background: #fff;
+}
+
+.ventilatieRealisatie img {
+  width: 300px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.ventilatieRealisatiesTekst {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #161f7a;
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .ventilatieRealisatiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ventilatieRealisaties {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .ventilatieRealisatiesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ventilatieRealisatie {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .ventilatieRealisatiesTekst {
+    font-size: 21px;
+  }
 }

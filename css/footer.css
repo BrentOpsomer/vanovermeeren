@@ -1,141 +1,361 @@
-/* ===== Footer (één uniforme achtergrond, icon-bubbles + tekst ernaast) ===== */
+/* ===== Footer ===== */
 .site-footer {
-  --bg: #161f7a; /* uniforme achtergrond */
+  --bg: #161f7a;
   --text: #edf2ff;
   --muted: #cbd3ff;
-  --line: rgba(255, 255, 255, 0.15);
-  --bubble-bg: rgba(255, 255, 255, 0.2);
-  --bubble-bg-hover: rgba(255, 255, 255, 0.3);
+  --line: rgba(255, 255, 255, 0.16);
+  --line-strong: rgba(255, 255, 255, 0.78);
+  --icon-bg: rgba(255, 255, 255, 0.14);
+  --icon-bg-hover: rgba(255, 255, 255, 0.22);
 
+  width: 100%;
   background: var(--bg);
   color: var(--text);
-  width: 100%;
+  overflow: hidden;
+}
+
+.site-footer * {
+  box-sizing: border-box;
 }
 
 .site-footer a {
   color: var(--muted);
   text-decoration: none;
-  transition: color 0.2s ease, padding-left 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
+
 .site-footer a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .site-footer__inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 16px 28px;
+  padding: 46px 18px 22px;
 }
 
-/* Grid: 1 kolom mobiel (centraal), 3 kolommen desktop */
+/* ===== Grid ===== */
 .site-footer__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
-  align-items: start;
-  text-align: center; /* MOBILE: navigatie gecentreerd */
+  gap: 34px;
+  text-align: center;
 }
-@media (min-width: 820px) {
+
+@media (min-width: 900px) {
   .site-footer__grid {
-    grid-template-columns: 1.2fr 0.8fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr 1fr;
+    gap: 36px;
     text-align: left;
+    align-items: start;
   }
 }
 
-/* Logo & intro */
-.footer-logo {
-  width: 170px;
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  border-radius: 8px;
-}
-.footer-text {
-  margin: 12px 0 0;
-  color: var(--muted);
-  line-height: 1.6;
+.footer-block {
+  min-width: 0;
 }
 
-/* Titels */
-.footer-title {
-  margin: 0 0 14px;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  position: relative;
-  display: inline-block;
+/* ===== Brand ===== */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.footer-logo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.footer-text {
+  margin: 14px 0 0;
+  max-width: 340px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 15px;
+}
+
+.footer-partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.footer-partner-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 72px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-partner-link:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.footer-partner-logo {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: 34px;
+  object-fit: contain;
+}
+
+.footer-partner-logo--buderus {
+  height: 30px;
+}
+
+.footer-partner-logo--panasonic {
+  height: 34px;
+}
+
+@media (min-width: 900px) {
+  .footer-brand {
+    align-items: flex-start;
+  }
+
+  .footer-text {
+    max-width: 360px;
+  }
+
+  .footer-partners {
+    justify-content: flex-start;
+  }
+}
+
+/* ===== Titles ===== */
+.footer-title {
+  margin: 0;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .footer-title::after {
   content: "";
   display: block;
-  width: 48px;
-  height: 2px;
-  margin: 8px auto 0; /* MOBILE: lijn midden */
-  background: var(--line);
-}
-@media (min-width: 820px) {
-  .footer-title::after {
-    margin-left: 0;
-  } /* DESKTOP: lijn links */
+  width: 50px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line-strong);
+  margin: 14px auto 0;
 }
 
-/* Navigatie-links (moeten op mobile gecentreerd) */
+@media (min-width: 900px) {
+  .footer-title {
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    text-transform: none;
+  }
+
+  .footer-title::after {
+    width: 42px;
+    height: 3px;
+    margin: 10px 0 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ===== Nav ===== */
 .footer-links {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
-  text-align: center; /* MOBILE: centreren */
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
 }
+
 .footer-links li {
-  margin: 6px 0;
+  margin: 0;
 }
+
 .footer-links a {
-  font-weight: 600;
   display: inline-block;
+  font-weight: 600;
+  line-height: 1.45;
 }
-.footer-links a:hover {
-  padding-left: 4px;
-}
+
 .footer-links a.onder {
   font-size: 13px;
+  font-weight: 500;
 }
 
-@media (min-width: 820px) {
+.footer-links a:hover {
+  transform: translateX(3px);
+}
+
+@media (min-width: 900px) {
   .footer-links {
     text-align: left;
-  } /* DESKTOP: links */
+    margin-top: 12px;
+  }
 }
 
-/* Contactlijst: icon-bubble + tekst */
+/* ===== Contact mobile exacte flow ===== */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contact__mobile-flow {
+  width: 100%;
+  max-width: 340px;
+  margin: 16px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contact__pin,
+.footer-contact__mailicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.footer-contact__pin {
+  margin-top: 8px;
+}
+
+.contact-address {
+  margin-top: 16px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 260px;
+}
+
+.footer-contact__brandlogo {
+  margin-top: 26px;
+}
+
+.footer-contact-logo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 33px;
+  color: #ffffff !important;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+.footer-contact__mailicon {
+  margin-top: 18px;
+}
+
+.footer-contact__mailicon--mail {
+  margin-top: 18px;
+}
+
+.footer-contact__mailicon .contact-symbol {
+  font-size: 24px;
+}
+
+.contact-multi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-multi--phone {
+  margin-top: 16px;
+}
+
+.contact-multi--mail {
+  margin-top: 16px;
+}
+
+.contact-phone,
+.contact-mail {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-mail {
+  word-break: break-word;
+}
+
+/* ===== Desktop contact ===== */
+.footer-contact__desktop {
+  display: none;
+}
+
 .contact-list {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 12px 0 0;
 }
 
-/* Contactrij */
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 10px; /* kort bij elkaar “plakken” */
-  margin: 10px 0;
-  justify-content: flex-start; /* altijd links */
+  gap: 12px;
+  margin: 12px 0;
 }
 
-/* >>> MOBILE SPECIFIEK: links + extra linker marge voor de rij en iconen <<< */
-@media (max-width: 819px) {
-  .footer-contact .contact-list {
-    text-align: left;
-  }
-  .footer-contact .contact-item {
-    margin-left: 12px;
-  } /* gewenste left margin */
-  .footer-contact .icon-bubble {
-    margin-left: 4px;
-  } /* kleine extra left marge op icoon */
+.contact-item--multi {
+  align-items: flex-start;
 }
 
-/* Icon-bollen */
 .icon-bubble {
   width: 40px;
   height: 40px;
@@ -144,69 +364,174 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--bubble-bg);
-  color: #fff;
-  transition: background 0.2s ease, transform 0.2s ease;
+  background: var(--icon-bg);
+  color: #ffffff;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
+
 .icon-bubble i {
   font-size: 18px;
   line-height: 1;
 }
-.icon-bubble:hover {
-  background: var(--bubble-bg-hover);
-  transform: translateY(-2px);
+
+.contact-item:hover .icon-bubble {
+  background: var(--icon-bg-hover);
+  transform: translateY(-1px);
 }
 
-/* Tekst naast de bol */
 .contact-link {
   color: var(--muted);
-  line-height: 1.4;
+  line-height: 1.5;
   word-break: break-word;
 }
-.contact-link:hover {
-  color: #fff;
-}
 
-/* Socials (bollen, zonder tekst) */
-.socials {
+.contact-link-group {
   display: flex;
-  gap: 12px;
-  margin-top: 12px;
-  justify-content: center; /* MOBILE: centraal */
-}
-@media (min-width: 820px) {
-  .socials {
-    justify-content: flex-start;
-  } /* DESKTOP: links */
-}
-.icon-bubble.social {
-  text-decoration: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
 }
 
-/* Onderbalk */
+.socials--desktop {
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
+.social-link--desktop {
+  width: 42px;
+  height: 42px;
+  font-size: 24px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.social-link--desktop:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ===== Desktop switch ===== */
+@media (min-width: 900px) {
+  .footer-contact {
+    align-items: flex-start;
+  }
+
+  .footer-contact__mobile-flow {
+    display: none;
+  }
+
+  .footer-contact__desktop {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ===== Bottom ===== */
 .site-footer__bottom {
+  margin-top: 34px;
+  padding-top: 16px;
   border-top: 1px solid var(--line);
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
   justify-content: center;
   align-items: center;
-  padding: 16px 0 4px;
-  margin-top: 28px;
-  flex-wrap: wrap;
+  text-align: center;
 }
+
 .footer-bottom__left,
 .footer-bottom__right {
   margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
+
 .footer-bottom__right a {
   font-weight: 600;
 }
 
-/* Visually hidden helper */
+@media (min-width: 900px) {
+  .site-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 16px;
+  }
+}
+
+/* ===== Small screens ===== */
+@media (max-width: 480px) {
+  .site-footer__inner {
+    padding: 40px 16px 18px;
+  }
+
+  .site-footer__grid {
+    gap: 28px;
+  }
+
+  .footer-title {
+    font-size: 17px;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-title::after {
+    width: 48px;
+    height: 5px;
+    margin-top: 12px;
+  }
+
+  .contact-address,
+  .contact-phone,
+  .contact-mail {
+    font-size: 14px;
+  }
+
+  .footer-contact-logo {
+    width: 170px;
+  }
+
+  .social-link {
+    width: 42px;
+    height: 42px;
+    font-size: 31px;
+  }
+
+  .contact-symbol {
+    font-size: 32px;
+  }
+
+  .footer-contact__mailicon .contact-symbol {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-contact-logo {
+    width: 150px;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .contact-address,
+  .contact-phone,
+  .contact-mail {
+    font-size: 13px;
+  }
+
+  .social-link {
+    font-size: 28px;
+  }
+}
+
+/* ===== Accessibility ===== */
 .visually-hidden {
   position: absolute !important;
-  height: 1px;
   width: 1px;
+  height: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
@@ -215,14 +540,10 @@
   margin: -1px;
 }
 
-/* Zeer smal scherm */
-@media (max-width: 360px) {
-  .icon-bubble {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-  }
-  .footer-logo {
-    width: 150px;
-  }
+.footer-partner-logo--buderus {
+  height: 50px;
+}
+
+.footer-partner-logo--panasonic {
+  height: 34px;
 }
