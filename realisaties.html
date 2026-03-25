@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" translate="no">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realisaties</title>
+
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <script src="./js/include.js" type="module" defers></script>
+    <link rel="stylesheet" href="./css/realisaties.css">
+
+    <script src="./js/include.js" type="module" defer></script>
     <script src="./js/header.js" defer></script>
-    <link rel="stylesheet" href="css/realisaties.css">
 </head>
 
 <body>
@@ -22,68 +25,96 @@
             </div>
         </div>
     </header>
+
     <section class="buttonsSection">
-        <!-- <h1>Onze Realisaties</h1> -->
         <div class="buttons">
-            <button onclick="showCategory('verwarming'),showTitel('verwarmingTitel')">Verwarming</button>
-            <button onclick="showCategory('sanitair'),showTitel('sanitairTitel')">Sanitair</button>
-            <button onclick="showCategory('ventilatie',showTitel('ventilatieTitel'))">Ventilatie</button>
-            <button onclick="showCategory('airconditioning',showTitel('airconditioningTitle'))">Airconditioning</button>
+            <button onclick="showCategory('verwarming'); showTitel('verwarmingTitel')">Verwarming</button>
+            <button onclick="showCategory('sanitair'); showTitel('sanitairTitel')">Sanitair</button>
+            <button onclick="showCategory('ventilatie'); showTitel('ventilatieTitel')">Ventilatie</button>
+            <button
+                onclick="showCategory('airconditioning'); showTitel('airconditioningTitle')">Airconditioning</button>
         </div>
     </section>
 
     <main>
         <!-- Verwarming -->
-        <section>
+        <section class="gallerySection">
             <h2 class="galleryTitel" id="verwarmingTitel">Verwarming</h2>
 
             <div class="gallery" id="verwarming">
-                <img src="fotos/verwarming.png" alt="Verwarming project 1" onclick="openLightbox(0, 'verwarming')">
-                <img src="fotos/achtergrond.png" alt="Verwarming project 2" onclick="openLightbox(1, 'verwarming')">
-                <img src="fotos/verwarming3.png" alt="Verwarming project 3" onclick="openLightbox(2, 'verwarming')">
-                <img src="fotos/verwarming.png" alt="Verwarming project 1" onclick="openLightbox(3, 'verwarming')">
-                <img src="fotos/verwarming2.png" alt="Verwarming project 2" onclick="openLightbox(4, 'verwarming')">
-                <img src="fotos/verwarming4.png" alt="Verwarming project 3" onclick="openLightbox(5, 'verwarming')">
-                <img src="fotos/verwarming.png" alt="Verwarming project 1" onclick="openLightbox(6, 'verwarming')">
-                <img src="fotos/achtergrond.png" alt="Verwarming project 2" onclick="openLightbox(7, 'verwarming')">
-                <img src="fotos/verwarming1.png" alt="Verwarming project 3" onclick="openLightbox(8, 'verwarming')">
+                <img src="./fotos/verwarming.png" alt="Verwarming project 1" data-title="Project ABC"
+                    onclick="openLightbox(0, 'verwarming')">
+                <img src="./fotos/achtergrond.png" alt="Verwarming project 2" data-title="Project DEF"
+                    onclick="openLightbox(1, 'verwarming')">
+                <img src="./fotos/verwarming3.png" alt="Verwarming project 3" data-title="Project GHI"
+                    onclick="openLightbox(2, 'verwarming')">
+                <img src="./fotos/verwarming.png" alt="Verwarming project 4" data-title="Project JKL"
+                    onclick="openLightbox(3, 'verwarming')">
+                <img src="./fotos/verwarming2.png" alt="Verwarming project 5" data-title="Project MNO"
+                    onclick="openLightbox(4, 'verwarming')">
+                <img src="./fotos/verwarming4.png" alt="Verwarming project 6" data-title="Project PQR"
+                    onclick="openLightbox(5, 'verwarming')">
+                <img src="./fotos/verwarming.png" alt="Verwarming project 7" data-title="Project STU"
+                    onclick="openLightbox(6, 'verwarming')">
+                <img src="./fotos/achtergrond.png" alt="Verwarming project 8" data-title="Project VWX"
+                    onclick="openLightbox(7, 'verwarming')">
+                <img src="./fotos/verwarming1.png" alt="Verwarming project 9" data-title="Project YZA"
+                    onclick="openLightbox(8, 'verwarming')">
             </div>
         </section>
 
         <!-- Sanitair -->
-        <section>
+        <section class="gallerySection">
             <h2 class="galleryTitel hidden" id="sanitairTitel">Sanitair</h2>
+
             <div class="gallery hidden" id="sanitair">
-                <img src="fotos/stock.jpg" alt="Sanitair project 1" onclick="openLightbox(0, 'sanitair')">
-                <img src="fotos/stock.jpg" alt="Sanitair project 1" onclick="openLightbox(1, 'sanitair')">
-                <img src="fotos/stock.jpg" alt="Sanitair project 1" onclick="openLightbox(2, 'sanitair')">
-                <img src="fotos/stock.jpg" alt="Sanitair project 1" onclick="openLightbox(3, 'sanitair')">
-                <img src="fotos/stock.jpg" alt="Sanitair project 1" onclick="openLightbox(4, 'sanitair')">
-                <img src="fotos/stock.jpg" alt="Sanitair project 1" onclick="openLightbox(5, 'sanitair')">
-                <img src="fotos/stock.jpg" alt="Sanitair project 1" onclick="openLightbox(6, 'sanitair')">
+                <img src="./fotos/stock.jpg" alt="Sanitair project 1" data-title="Project Badkamer 1"
+                    onclick="openLightbox(0, 'sanitair')">
+                <img src="./fotos/stock.jpg" alt="Sanitair project 2" data-title="Project Badkamer 2"
+                    onclick="openLightbox(1, 'sanitair')">
+                <img src="./fotos/stock.jpg" alt="Sanitair project 3" data-title="Project Badkamer 3"
+                    onclick="openLightbox(2, 'sanitair')">
+                <img src="./fotos/stock.jpg" alt="Sanitair project 4" data-title="Project Badkamer 4"
+                    onclick="openLightbox(3, 'sanitair')">
+                <img src="./fotos/stock.jpg" alt="Sanitair project 5" data-title="Project Badkamer 5"
+                    onclick="openLightbox(4, 'sanitair')">
+                <img src="./fotos/stock.jpg" alt="Sanitair project 6" data-title="Project Badkamer 6"
+                    onclick="openLightbox(5, 'sanitair')">
+                <img src="./fotos/stock.jpg" alt="Sanitair project 7" data-title="Project Badkamer 7"
+                    onclick="openLightbox(6, 'sanitair')">
             </div>
         </section>
+
         <!-- Ventilatie -->
-        <section>
+        <section class="gallerySection">
             <h2 class="galleryTitel hidden" id="ventilatieTitel">Ventilatie</h2>
+
             <div class="gallery hidden" id="ventilatie">
-                <img src="fotos/stock.jpg" alt="Ventilatie project 1" onclick="openLightbox(0, 'ventilatie')">
-                <img src="fotos/stock.jpg" alt="Ventilatie project 1" onclick="openLightbox(1, 'ventilatie')">
-                <img src="fotos/stock.jpg" alt="Ventilatie project 1" onclick="openLightbox(2, 'ventilatie')">
-                <img src="fotos/stock.jpg" alt="Ventilatie project 1" onclick="openLightbox(3, 'ventilatie')">
-                <img src="fotos/stock.jpg" alt="Ventilatie project 1" onclick="openLightbox(4, 'ventilatie')">
-                <img src="fotos/stock.jpg" alt="Ventilatie project 1" onclick="openLightbox(5, 'ventilatie')">
+                <img src="./fotos/stock.jpg" alt="Ventilatie project 1" data-title="Project Ventilatie 1"
+                    onclick="openLightbox(0, 'ventilatie')">
+                <img src="./fotos/stock.jpg" alt="Ventilatie project 2" data-title="Project Ventilatie 2"
+                    onclick="openLightbox(1, 'ventilatie')">
+                <img src="./fotos/stock.jpg" alt="Ventilatie project 3" data-title="Project Ventilatie 3"
+                    onclick="openLightbox(2, 'ventilatie')">
+                <img src="./fotos/stock.jpg" alt="Ventilatie project 4" data-title="Project Ventilatie 4"
+                    onclick="openLightbox(3, 'ventilatie')">
+                <img src="./fotos/stock.jpg" alt="Ventilatie project 5" data-title="Project Ventilatie 5"
+                    onclick="openLightbox(4, 'ventilatie')">
+                <img src="./fotos/stock.jpg" alt="Ventilatie project 6" data-title="Project Ventilatie 6"
+                    onclick="openLightbox(5, 'ventilatie')">
             </div>
         </section>
+
         <!-- Airconditioning -->
-        <section>
+        <section class="gallerySection">
             <h2 class="galleryTitel hidden" id="airconditioningTitle">Airconditioning</h2>
+
             <div class="gallery hidden" id="airconditioning">
-                <img src="airconditioning1.jpg" alt="Airconditioning project 1"
+                <img src="./fotos/airconditioning1.jpg" alt="Airconditioning project 1" data-title="Project Airco 1"
                     onclick="openLightbox(0, 'airconditioning')">
-                <img src="airconditioning2.jpg" alt="Airconditioning project 2"
+                <img src="./fotos/airconditioning2.jpg" alt="Airconditioning project 2" data-title="Project Airco 2"
                     onclick="openLightbox(1, 'airconditioning')">
-                <img src="airconditioning3.jpg" alt="Airconditioning project 3"
+                <img src="./fotos/airconditioning3.jpg" alt="Airconditioning project 3" data-title="Project Airco 3"
                     onclick="openLightbox(2, 'airconditioning')">
             </div>
         </section>
@@ -92,18 +123,20 @@
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox hidden">
         <span class="close" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" src="" alt="Foto">
-        <div class="navigation">
-            <button class="prev" onclick="prevImage()">&#10094;</button>
-            <button class="next" onclick="nextImage()">&#10095;</button>
-        </div>
-    </div>
-    <footer id="footer-placeholder">
 
-    </footer>
+        <div class="lightbox-wrapper">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+            <img id="lightbox-img" src="" alt="Foto">
+        </div>
+
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <footer id="footer-placeholder"></footer>
 
     <script src="https://kit.fontawesome.com/d67b9bf45c.js" crossorigin="anonymous"></script>
-    <script src="js/realisaties.js"></script>
+    <script src="./js/realisaties.js"></script>
 </body>
 
 </html>

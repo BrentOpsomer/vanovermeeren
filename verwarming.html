@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./fotos/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- BELANGRIJK: jouw originele CSS blijft -->
     <link rel="stylesheet" href="./css/verwarming.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/overlay.css">
+
     <script src="./js/include.js" type="module" defer></script>
     <script src="./js/header.js" defer></script>
     <script src="./js/overlayVerwarming.js" defer></script>
@@ -27,29 +30,34 @@
             </div>
         </div>
     </header>
+
     <main>
         <section>
-            <div class="verwarmingsText">
-                <div class="links">
-                    <h2>Of u nu kiest voor een klassieke condensatieketel op gas of mazout, of liever gaat voor de
-                        nieuwste duurzame oplossingen zoals warmtepompen met een geothermische of aerothermische bron –
-                        bij Van Overmeeren bent u aan het juiste adres.</h2>
 
-                    <div class="buderus">
-                        <div class="logoPos logoRow">
-                            <img class="brandLogo buderusBrand" src="./fotos/buderuslogo.png" alt="Buderus">
-                            <img class="brandLogo panasonicBrand" src="./fotos/collabs/logo panasonic.png"
-                                alt="Panasonic">
-                        </div>
+            <!-- NIEUW PROFESSIONEEL BLOK -->
+            <div class="introWrapper">
+                <div class="introBox">
 
-                        <div class="buderusTextDiv">
-                            <p class="text">Wij werken met topmerken zoals Buderus en Panasonic en zorgen altijd voor
-                                een efficiënte en energiezuinige installatie waar u jarenlang op kunt vertrouwen.</p>
-                        </div>
+                    <h2 class="introTitle">
+                        Of u nu kiest voor een klassieke condensatieketel op gas of mazout,
+                        of liever gaat voor de nieuwste duurzame oplossingen zoals warmtepompen —
+                        bij Van Overmeeren bent u aan het juiste adres.
+                    </h2>
+
+                    <p class="introText">
+                        Wij werken met topmerken zoals Buderus en Panasonic en zorgen altijd voor
+                        een efficiënte en energiezuinige installatie waar u jarenlang op kunt vertrouwen.
+                    </p>
+
+                    <div class="introLogos">
+                        <img src="./fotos/buderuslogo.png" alt="Buderus">
+                        <img src="./fotos/collabs/logo panasonic.png" alt="Panasonic">
                     </div>
+
                 </div>
             </div>
 
+            <!-- HIERONDER IS ALLES ORIGINEEL -->
             <div class="soortenVerwarming">
                 <div class="soort">
                     <img src="./fotos/warmtepomp.png" alt="Warmtepomp">
@@ -72,30 +80,30 @@
             <div class="verwarmingRealisaties">
                 <div class="verwarmingRealisatiesGrid">
                     <div class="verwarmingRealisatie">
-                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 1.jpg"
-                            alt="Van Overmeeren verwarmingsinstallaties 1">
+                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 1.jpg">
                     </div>
                     <div class="verwarmingRealisatie">
-                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 2.jpg"
-                            alt="Van Overmeeren verwarmingsinstallaties 2">
+                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 2.jpg">
                     </div>
                     <div class="verwarmingRealisatie">
-                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 3.jpg"
-                            alt="Van Overmeeren verwarmingsinstallaties 3">
+                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 3.jpg">
                     </div>
                     <div class="verwarmingRealisatie">
-                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 4.jpg"
-                            alt="Van Overmeeren verwarmingsinstallaties 4">
+                        <img src="./fotos/VAN OVERMEEREN - VERWARMINGS INSTALLATIES 4.jpg">
                     </div>
                 </div>
 
                 <div class="verwarmingRealisatiesCta">
                     <p>Ontdek onze realisaties</p>
-                    <button onclick="location.href='realisaties.html'">Bekijk al onze realisaties</button>
+                    <button onclick="location.href='realisaties.html'">
+                        Bekijk al onze realisaties
+                    </button>
                 </div>
             </div>
+
         </section>
 
+        <!-- overlay blijft -->
         <div id="overlay" class="overlay">
             <button class="overlay-close" onclick="closeOverlay()">×</button>
             <div class="slideshow-container">
@@ -104,9 +112,12 @@
                 <button class="slide-btn slide-next" onclick="nextSlide()">›</button>
             </div>
         </div>
+
     </main>
+
     <footer id="footer-placeholder"></footer>
-    <script src="https://kit.fontawesome.com/d67b9bf45c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d67b9bf45c.js"></script>
+
 </body>
 
 </html>

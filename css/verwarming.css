@@ -34,6 +34,70 @@ section {
   text-align: center;
 }
 
+/* NIEUW INTRO BLOK */
+
+.introWrapper {
+  max-width: 1200px;
+  margin: 45px auto 35px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.introBox {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 40px 50px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 20px;
+}
+
+.introTitle {
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 22px auto;
+  color: #161f7a;
+  font-weight: 700;
+}
+
+.introText {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 30px auto;
+  color: #333333;
+}
+
+.introLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.introLogos img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.introLogos img:first-child {
+  max-height: 120px;
+}
+
+.introLogos img:last-child {
+  max-height: 80px;
+}
+
+/* ORIGINELE CSS BLIJFT HIERONDER */
+
 .links {
   margin-top: 35px;
 }
@@ -341,6 +405,24 @@ section {
   .verwarmingRealisatiesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .introWrapper {
+    max-width: 1100px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .introBox {
+    padding: 35px 35px;
+  }
+
+  .introTitle {
+    font-size: 28px;
+  }
+
+  .introText {
+    font-size: 19px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -370,6 +452,36 @@ section {
 
   .panasonicBrand {
     max-height: 32px;
+  }
+
+  .introWrapper {
+    margin: 35px auto 30px auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .introBox {
+    padding: 30px 28px;
+  }
+
+  .introTitle {
+    font-size: 24px;
+  }
+
+  .introText {
+    font-size: 18px;
+  }
+
+  .introLogos {
+    gap: 30px;
+  }
+
+  .introLogos img:first-child {
+    max-height: 58px;
+  }
+
+  .introLogos img:last-child {
+    max-height: 36px;
   }
 }
 
@@ -432,5 +544,40 @@ section {
 
   .verwarmingRealisatiesCta p {
     font-size: 21px;
+  }
+
+  .introWrapper {
+    margin: 28px auto 25px auto;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .introBox {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .introTitle {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+
+  .introText {
+    font-size: 17px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .introLogos {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .introLogos img:first-child {
+    max-height: 42px;
+  }
+
+  .introLogos img:last-child {
+    max-height: 28px;
   }
 }

@@ -1,30 +1,21 @@
-/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
-}
-
-.buttonsSection {
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(to right, #161f7a, #1321b9);
-  color: white;
-  top: 0;
-  z-index: 1000;
-}
-
-.buttonsSection h1 {
-  margin: 0;
-  font-size: 4rem;
+  background-color: #f8f9fc;
+  color: #1f1f1f;
 }
 
 .hero {
-  background-image: url(../fotos/badkamer.jpg);
+  background-image: url("../fotos/achtergrond.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  /* color        : #161f7a; */
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -33,151 +24,214 @@ body {
   font-size: 50px;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
 }
 
+.buttonsSection {
+  padding: 40px 20px 10px;
+}
+
 .buttons {
-  margin-top: 10px;
-}
-
-.buttons button {
-  background-color: white;
-  color: #161f7a;
-  border: 2px solid #161f7a;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px;
-  transition: all 0.3s ease;
-  font-weight: bold;
-  width: 160px;`
-  text-align: center;
-}
-
-.buttons button:hover {
-  background-color: #161f7a;
-  color: white;
-}
-
-/* Gallery Styles */
-main {
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+.buttons button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: solid 2px #8bb2e9;
+  border-radius: 24px;
+  background-color: #8bb2e9;
+  color: #161f7a;
+  letter-spacing: 1px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 15px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: translateY(-4px);
+}
+
+main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px 70px;
+}
+
+.gallerySection {
   margin-top: 20px;
-  margin-bottom: 80px;
 }
 
 .galleryTitel {
-  text-align: center;
-  margin-bottom: 20px;
-  display: block;
+  font-size: 34px;
   color: #161f7a;
-  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .gallery img {
-  width: 300px; /* Vaste breedte */
-  height: 200px; /* Vaste hoogte */
+  width: 100%;
+  aspect-ratio: 1 / 0.72;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 15px;
   cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  background: #fff;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 22px;
 }
 
-/* Hidden Class */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-/* Lightbox */
+/* LIGHTBOX */
+
 .lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.92);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1000;
-  transition: opacity 0.3s ease;
+  justify-content: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
 }
 
-.lightbox.hidden {
-  display: none;
+.lightbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
 }
 
-.lightbox img {
-  width: 75rem; /* Foto vult maximaal 90% van het scherm */
-  max-height: 100vh; /* Foto vult maximaal 90% van het scherm */
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+.lightbox-caption {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 20px 0;
+  max-width: 90vw;
 }
 
-/* Close Button */
-.lightbox .close {
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 75vh;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 30px;
+  display: block;
+}
+
+.close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 18px;
+  right: 26px;
   color: white;
-  font-size: 40px;
+  font-size: 44px;
   font-weight: bold;
   cursor: pointer;
-  z-index: 1001;
+  line-height: 1;
 }
 
-/* Navigation Buttons */
-.navigation {
+.prev,
+.next {
   position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.navigation .prev,
-.navigation .next {
-  background: none; /* Geen achtergrond */
-  border: none;
+  background-color: rgba(255, 255, 255, 0.14);
   color: white;
-  font-size: 50px; /* Grotere pijlen */
+  border: none;
+  font-size: 34px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
   cursor: pointer;
-  padding: 0; /* Geen extra ruimte */
-  transition: color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.navigation .prev:hover,
-.navigation .next:hover {
-  color: #4caf50; /* Kleur verandert bij hover */
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.24);
 }
 
-.navigation .prev {
-  position: absolute;
-  left: 5%; /* Pijlen aan de rand van de foto */
+.prev {
+  left: 25px;
 }
 
-.navigation .next {
-  position: absolute;
-  right: 5%; /* Pijlen aan de rand van de foto */
+.next {
+  right: 25px;
+}
+
+@media screen and (max-width: 700px) {
+  .lightbox-caption {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  #lightbox-img {
+    max-width: 92vw;
+    max-height: 65vh;
+  }
+
+  .prev,
+  .next {
+    width: 46px;
+    height: 46px;
+    font-size: 28px;
+  }
+
+  .prev {
+    left: 12px;
+  }
+
+  .next {
+    right: 12px;
+  }
+
+  .close {
+    top: 12px;
+    right: 18px;
+    font-size: 38px;
+  }
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
