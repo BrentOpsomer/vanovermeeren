@@ -1,9 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
     const collages = {
-        "gas": ["./fotos/gas.png", "./fotos/gas.jpg", "./fotos/gasinstallatie.jpg"],
-        "mazout": ["./fotos/stock.jpg", "./fotos/stock.jpg", "./fotos/stock.jpg"],
-        "warmtepomp": ["./fotos/stock.jpg", "./fotos/stock.jpg", "./fotos/stock.jpg"],
-        "vloerverwarming": ["./fotos/stock.jpg", "./fotos/stock.jpg", "./fotos/stock.jpg"]
+        "warmtepomp": [
+            "./fotos/verwarming/Warmtepomp/IMG_3347.jpg",
+            "./fotos/verwarming/Warmtepomp/IMG_8970.jpg",
+            "./fotos/verwarming/Warmtepomp/IMG_9763.jpg"
+        ],
+        "gas": [
+            "./fotos/verwarming/Gas/IMG_0998.jpg",
+            "./fotos/verwarming/Gas/IMG_3046.jpg",
+            "./fotos/verwarming/Gas/IMG_8423.jpg"
+        ],
+        "mazout": [
+            "./fotos/verwarming/Mazout/IMG_1888.jpg",
+            "./fotos/verwarming/Mazout/IMG_5959.jpg",
+            "./fotos/verwarming/Mazout/IMG_5961.jpg"
+        ],
+        "vloerverwarming": [
+            "./fotos/verwarming/Vloerverwarming/IMG_0025.jpg",
+            "./fotos/verwarming/Vloerverwarming/IMG_2359.jpg",
+            "./fotos/verwarming/Vloerverwarming/IMG_7319.jpg"
+        ]
     };
 
     let currentSlideIndex = 0;

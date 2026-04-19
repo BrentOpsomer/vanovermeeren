@@ -3,15 +3,18 @@ function insertNavigationMenu() {
   const navigationMenu = `
     <nav class="nav" role="navigation" aria-label="Main navigation">
   <ul class="menu">
-    <div class="logo" onclick="window.location.href='index';">
+    <a class="logo" href="index" aria-label="Ga naar home">
       <p class="naam">VAN OVERMEEREN</p>
-      <img src="fotos/logoHeader.png">
-    </div>
+      <div class="logo-pair">
+        <img src="fotos/logoHeader.png" alt="Van Overmeeren logo">
+        <img class="logo-pair__secondary" src="fotos/collabs/logo-lukas-zonder-achtergrond.png" alt="Extra logo">
+      </div>
+    </a>
     <li class="item"><a href="index">HOME</a></li>
     <li class="item"><a href="verwarming">VERWARMING</a></li>
-    <li class="item"><a href="sanitair">SANITAIR</a></li>
     <li class="item"><a href="ventilatie">VENTILATIE</a></li>
     <li class="item"><a href="airconditioning">AIRCONDITIONING</a></li>
+    <li class="item"><a href="sanitair">SANITAIR</a></li>
     <li class="item"><a href="realisaties">REALISATIES</a></li>
     <li class="item"><a href="#foot">CONTACT</a></li>
     <button class="navKnop" aria-controls="navigatie">
@@ -46,7 +49,10 @@ function includeFooterMenu() {
           <!-- Merk / logo -->
           <section class="footer-block footer-brand" aria-labelledby="footer-brand-title">
             <h4 id="footer-brand-title" class="visually-hidden">Van Overmeeren</h4>
-            <img class="footer-logo" src="fotos/logo.png" alt="Van Overmeeren bv">
+            <div class="footer-logo-group">
+              <img class="footer-logo" src="fotos/logo.png" alt="Van Overmeeren bv">
+              <img class="footer-logo footer-logo--secondary" src="fotos/collabs/logo-lukas-zonder-achtergrond.png" alt="Extra logo">
+            </div>
             <p class="footer-text">
               Verwarming • Ventilatie • Airconditioning • Sanitair
             </p>

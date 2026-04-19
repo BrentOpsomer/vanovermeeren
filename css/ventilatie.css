@@ -6,10 +6,11 @@ html {
 }
 
 .hero {
-  background-image: url(../fotos/onderhoud.png);
+  background-image: url(../fotos/ventilatie/IMG_6918.jpg);
   background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  background-position: center 36%;
+  padding-top: 170px;
+  padding-bottom: 170px;
 }
 
 .hero h1 {

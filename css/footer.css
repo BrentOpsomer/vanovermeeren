@@ -65,12 +65,24 @@
   align-items: center;
 }
 
+.footer-logo-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
 .footer-logo {
   display: block;
   width: 180px;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.footer-logo--secondary {
+  width: 152px;
 }
 
 .footer-text {
@@ -128,6 +140,10 @@
 @media (min-width: 900px) {
   .footer-brand {
     align-items: flex-start;
+  }
+
+  .footer-logo-group {
+    justify-content: flex-start;
   }
 
   .footer-text {
@@ -490,6 +506,14 @@
 
   .footer-contact-logo {
     width: 170px;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .footer-logo--secondary {
+    width: 118px;
   }
 
   .social-link {

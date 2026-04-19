@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const collages = {
-        "gas": ["./fotos/badkamer.png", "./fotos/badrealisatie.png", "./fotos/badkamer.jpg"],
-        "mazout": ["./fotos/stock.jpg", "./fotos/stock.jpg", "./fotos/stock.jpg"],
-        "warmtepomp": ["./fotos/stock.jpg", "./fotos/stock.jpg", "./fotos/stock.jpg"],
-        "vloerverwarming": ["./fotos/stock.jpg", "./fotos/stock.jpg", "./fotos/stock.jpg"]
+        "badkamerrenovatie": [
+            "./fotos/sanitair_badkamers/IMG_1912.jpg",
+            "./fotos/sanitair_badkamers/IMG_5941.jpg",
+            "./fotos/sanitair_badkamers/IMG_9646.jpg"
+        ],
+        "waterbehandeling": [
+            "./fotos/waterbehandeling/IMG_7563.jpg",
+            "./fotos/waterbehandeling/IMG_7564.jpg"
+        ],
+        "regenwaterrecuperatie": [
+            "./fotos/sanitaireVoorzieningen/IMG_2663.jpg",
+            "./fotos/sanitaireVoorzieningen/IMG_6993.jpg",
+            "./fotos/sanitaireVoorzieningen/IMG_8864.jpg"
+        ]
     };
 
     let currentSlideIndex = 0;
