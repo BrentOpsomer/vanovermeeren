@@ -7,7 +7,7 @@ function insertNavigationMenu() {
       <p class="naam">VAN OVERMEEREN</p>
       <div class="logo-pair">
         <img src="fotos/logoHeader.png" alt="Van Overmeeren logo">
-        <img class="logo-pair__secondary" src="fotos/collabs/logo-lukas-zonder-achtergrond.png" alt="Extra logo">
+        <img class="logo-pair__secondary" src="fotos/collabs/logo-lukas-origineel.png" alt="Extra logo">
       </div>
     </a>
     <li class="item"><a href="index">HOME</a></li>
@@ -49,13 +49,7 @@ function includeFooterMenu() {
           <!-- Merk / logo -->
           <section class="footer-block footer-brand" aria-labelledby="footer-brand-title">
             <h4 id="footer-brand-title" class="visually-hidden">Van Overmeeren</h4>
-            <div class="footer-logo-group">
-              <img class="footer-logo" src="fotos/logo.png" alt="Van Overmeeren bv">
-              <img class="footer-logo footer-logo--secondary" src="fotos/collabs/logo-lukas-zonder-achtergrond.png" alt="Extra logo">
-            </div>
-            <p class="footer-text">
-              Verwarming • Ventilatie • Airconditioning • Sanitair
-            </p>
+            <img class="footer-logo footer-logo--combo" src="fotos/collabs/combologo.jpg" alt="Van Overmeeren contactlogo">
 
             <div class="footer-partners" aria-label="Partners">
               <a
@@ -89,7 +83,6 @@ function includeFooterMenu() {
               <li><a class="onder" href="verwarming">- Verwarming</a></li>
               <li><a class="onder" href="sanitair">- Sanitair</a></li>
               <li><a class="onder" href="ventilatie">- Ventilatie</a></li>
-              <li><a class="onder" href="onderhoud">- Onderhoud</a></li>
             </ul>
           </nav>
 

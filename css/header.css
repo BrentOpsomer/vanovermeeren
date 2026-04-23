@@ -47,7 +47,8 @@ a {
 }
 
 .logo-pair__secondary {
-  width: 54px;
+  width: 92px !important;
+  max-width: 92px;
 }
 
 .naam {
@@ -248,7 +249,8 @@ button {
   }
 
   .logo-pair__secondary {
-    width: 46px !important;
+    width: 72px !important;
+    max-width: 72px;
   }
 }
 
@@ -266,6 +268,7 @@ button {
   }
 
   .logo-pair__secondary {
-    width: 50px;
+    width: 82px !important;
+    max-width: 82px;
   }
 }
